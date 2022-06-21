@@ -13,6 +13,10 @@ import { DoctorScheduleComponent } from './doctor-schedule/doctor-schedule.compo
 import { ChatComponent } from './chat/chat.component';
 import { PatientScheduleComponent } from './patient-schedule/patient-schedule.component';
 import { PatientScheduleRegisterComponent } from './patient-schedule-register/patient-schedule-register.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { BrMaskerModule } from 'br-mask';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -26,11 +30,14 @@ import { PatientScheduleRegisterComponent } from './patient-schedule-register/pa
     DoctorScheduleComponent,
     ChatComponent,
     PatientScheduleComponent,
-    PatientScheduleRegisterComponent
+    PatientScheduleRegisterComponent,
+    HeaderMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrMaskerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

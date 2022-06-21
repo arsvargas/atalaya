@@ -1,46 +1,117 @@
-<form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-      </div>
+<app-header-menu></app-header-menu>
+
+<div class="main-container">
+  <h3>Cadastro do Paciente</h3>
+  <form>
+
+    <div class="form-in">
+      <label for="">Nome Completo</label>
+      <input type="text" maxlength="10">
     </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+
+    <div class="form-in">
+      <label for="">Endereço</label>
+      <input type="text">
     </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+
+
+    <div class="form-in">
+      <label for="">Estado</label>
+      <select id="estado" name="estado">
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="EX">Estrangeiro</option>
+      </select>
     </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
-      </div>
+
+    <div class="form-in">
+      <label for="">Cidade</label>
+      <input type="text">
     </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
+
+    <div class="form-in">
+      <label for="">Data de nascimento</label>
+      <input type="date">
     </div>
-    <button type="submit" class="btn btn-primary" routerLink='/about-patient'>Sign in</button>
+
+    <div class="form-in">
+      <label for="bairro">Bairro</label>
+      <input type="text">
+    </div>
+
+    <div class="form-in">
+      <label for="cep">CEP</label>
+      <input type="text" name="cep" formControlName="mask" [brmasker]="{mask:'00.000-000', len:10}">
+    </div>
+
+    <div class="form-in">
+      <label for="telefone">Telefone</label>
+      <input type="text" name="phone" formControlName="mask" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}">
+
+    </div>
+
+    <div class="form-in">
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf" formControlName="mask" [brmasker]="{person: true}">
+    </div>
+
+    <div class="form-in">
+      <label for="sus">Num. cart. SUS</label>
+      <input type="text" maxlength="15" [brmasker]="{mask:'000000000000000', len:15}">
+    </div>
+
+    <div class="form-in">
+      <label for="nome">Convênio</label>
+      <input type="text">
+    </div>
+
+    <div class="form-in">
+      <label for="estado_civil">Estado civil</label>
+      <select name="estado_civil" id="estado_civil">
+        <option value=""></option>
+        <option value="Solteiro">Solteiro</option>
+        <option value="Casado">Casado</option>
+        <option value="Separado">Separado</option>
+        <option value="Divorciado">Divorciado</option>
+        <option value="Viúvo">Viúvo</option>
+        <option value="Amasiado">Amasiado</option>
+      </select>
+    </div>
+
+    <div class="form-in">
+      <label for="email">Email</label>
+      <input type="email">
+    </div>
+
+
   </form>
+  <button type="submit" routerLink='/about-patient'>Cadastrar</button>
+
+</div>
+
+<app-footer></app-footer>

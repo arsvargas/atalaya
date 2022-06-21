@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Comfortaa', cursive;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+:root {
+    --color-blue1: rgb(82,147,175);
+    --color-blue2: rgb(19,158,188);
+    --color-blue3: rgb(31,123,160); 
+    --color-blue4: rgb(10,80,107);
+}
+
+textarea:focus, input:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}

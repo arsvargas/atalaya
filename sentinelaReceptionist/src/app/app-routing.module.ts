@@ -10,6 +10,8 @@ import { DoctorScheduleComponent } from './doctor-schedule/doctor-schedule.compo
 import { PatientScheduleComponent } from './patient-schedule/patient-schedule.component';
 import { ChatComponent } from './chat/chat.component';
 import { PatientScheduleRegisterComponent } from './patient-schedule-register/patient-schedule-register.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +24,9 @@ const routes: Routes = [
   { path: 'patient-schedule', component: PatientScheduleComponent },
   { path: 'chat', component: ChatComponent },
   { path: 'patient-schedule-register', component: PatientScheduleRegisterComponent },
+  { path: 'header-menu', component: HeaderMenuComponent },
+  { path: 'footer', component: FooterComponent },
+
 
 
   { path: '', redirectTo: 'home', pathMatch: 'full' }
