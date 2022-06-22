@@ -1,0 +1,105 @@
+.mainbody{
+	min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 20px;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+    
+}
+
+.container .card .face{
+    width: 150px;
+    height: 100px;
+    transition: 0.5s;
+}
+
+
+.container .card .face.face1{
+    position: relative;
+    background-color:  rgb(10,80,107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(30px);
+    border-radius: 3px;
+}
+
+.container .card:hover .face.face1{
+    background-color: rgba(82, 147, 175, 0.61);
+    transform: translateY(0);
+    
+}
+
+.container .card .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+
+.container .card:hover .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0.7rem;
+    color: #fff;
+    text-align: left;
+    font-size: 12px;
+}
+.container .card .face.face1 .content h3{
+    padding: 0.7rem;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 200;
+}
+
+
+.container .card .face.face2{
+    border-radius: 3px;
+    position: relative;
+    background-color:  rgb(10,80,107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+    transform: translateY(-70px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1000px){
+    .container{
+        width: 300px;
+    }
+}

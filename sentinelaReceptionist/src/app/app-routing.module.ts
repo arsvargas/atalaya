@@ -12,6 +12,10 @@ import { ChatComponent } from './chat/chat.component';
 import { PatientScheduleRegisterComponent } from './patient-schedule-register/patient-schedule-register.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
+
+
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,6 +30,7 @@ const routes: Routes = [
   { path: 'patient-schedule-register', component: PatientScheduleRegisterComponent },
   { path: 'header-menu', component: HeaderMenuComponent },
   { path: 'footer', component: FooterComponent },
+  { path: 'about-doctor', component: AboutDoctorComponent },
 
 
 
