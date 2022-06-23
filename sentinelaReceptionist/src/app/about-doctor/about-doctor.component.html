@@ -1,31 +1,25 @@
 <app-header-menu></app-header-menu>
 
 <div class="mainbody">
+    <span>Nome do médico</span>
     <div class="container">
-
-        <div  *ngFor="let day of counter;">
-            <div class="card">
-                <a>
-                    <div class="face face1">
-                        <div class="content">
-
-                            <h3>{{day}}</h3>
-                            <h3>{{getWeekDay(day)}}</h3>
-
-                        </div>
+        <div *ngFor="let day of counter;">
+            <a>
+                <div class="card-container">
+                    <div class="front">
+                        <h2>{{day}}</h2>
+                        <h5>{{getWeekDay(day)}}</h5>
                     </div>
-                    <div class="face face2">
-                        <div class="content">
-                            <p>horario e paciente</p>
-                            <p>horario e paciente</p>
-
-                        </div>
+                    <div class="back">
+                        <p>14:00 João Silva</p>
+                        <p>14:30 João Silva2</p>
+                        <p>15:00 João Silva3</p>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-
     </div>
+
 </div>
 
 <app-footer></app-footer>

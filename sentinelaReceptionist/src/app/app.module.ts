@@ -17,6 +17,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { BrMaskerModule } from 'br-mask';
 import { FooterComponent } from './footer/footer.component';
 import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
+import { AboutDoctorDayComponent } from './about-doctor-day/about-doctor-day.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
     PatientScheduleRegisterComponent,
     HeaderMenuComponent,
     FooterComponent,
-    AboutDoctorComponent
+    AboutDoctorComponent,
+    AboutDoctorDayComponent
   ],
   imports: [
     BrowserModule,

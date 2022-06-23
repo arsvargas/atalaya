@@ -6,12 +6,12 @@
 
     <div class="form-in">
       <label for="">Nome Completo</label>
-      <input type="text" maxlength="10">
+      <input type="text" maxlength="10" required>
     </div>
 
     <div class="form-in">
       <label for="">Endereço</label>
-      <input type="text">
+      <input type="text" required>
     </div>
 
 
@@ -61,23 +61,23 @@
 
     <div class="form-in">
       <label for="bairro">Bairro</label>
-      <input type="text">
+      <input type="text" required>
     </div>
 
     <div class="form-in">
       <label for="cep">CEP</label>
-      <input type="text" name="cep" formControlName="mask" [brmasker]="{mask:'00.000-000', len:10}">
+      <input type="text" name="cep" formControlName="mask" [brmasker]="{mask:'00.000-000', len:10}" required>
     </div>
 
     <div class="form-in">
       <label for="telefone">Telefone</label>
-      <input type="tel" name="phone" formControlName="mask" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}">
+      <input type="tel" name="phone" formControlName="mask" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}" required>
 
     </div>
 
     <div class="form-in">
       <label for="cpf">CPF</label>
-      <input type="text" name="cpf" formControlName="mask" [brmasker]="{person: true}">
+      <input type="text" name="cpf" formControlName="mask" [brmasker]="{person: true}" required>
     </div>
 
     <div class="form-in">
@@ -105,7 +105,7 @@
 
     <div class="form-in">
       <label for="email">Email</label>
-      <input type="email">
+      <input type="email" required>
     </div>
 
 

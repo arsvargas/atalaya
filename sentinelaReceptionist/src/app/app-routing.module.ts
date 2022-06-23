@@ -13,7 +13,7 @@ import { PatientScheduleRegisterComponent } from './patient-schedule-register/pa
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
-
+import { AboutDoctorDayComponent } from './about-doctor-day/about-doctor-day.component';
 
 
 
@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'header-menu', component: HeaderMenuComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'about-doctor', component: AboutDoctorComponent },
+  { path: 'about-doctor-day', component: AboutDoctorDayComponent },
 
 
 
