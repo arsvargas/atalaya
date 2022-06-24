@@ -11,10 +11,10 @@
     <div class="center">
       <span>Resultado da Pesquisa</span>
       <ul>
-        <li routerLink="/receptionist-panel">Empresa 1</li>
-        <li>Empresa 2</li>
-        <li>Empresa 3</li>
-        <li>Empresa 4</li>
+        <li (click)="setLogoTemp(54)" routerLink="/receptionist-panel" >Empresa 1 <img src="../../assets/logoipsum-logo-54.svg"></li>
+        <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">Empresa 2 <img src="../../assets/logoipsum-logo-48.svg"></li>
+        <li routerLink="/receptionist-panel" (click)="setLogoTemp(55)">Empresa 3 <img src="../../assets/logoipsum-logo-55.svg"></li>
+        <li routerLink="/receptionist-panel" (click)="setLogoTemp(7)">Empresa 4 <img src="../../assets/logoipsum-logo-7.svg"></li>
       </ul>
   
     </div>

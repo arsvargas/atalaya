@@ -11,12 +11,13 @@ export class HeaderMenuComponent implements OnInit {
   cadastrarAgenda: any;
   alertaChat: any;
   pesquisarPaciente: any;
-
+  logo:any;
 
   constructor() { }
 
   ngOnInit(): void {
     this.checkLightedButton();
+    this. getLogoTemp();
   }
 
   buttonOn(button: string): void {
@@ -74,6 +75,13 @@ export class HeaderMenuComponent implements OnInit {
       this.cadastrarAgenda = false;
       this.alertaChat = false;
     }
+  }
+
+  getLogoTemp(){
+    this.logo = localStorage.getItem("img");
+    console.log("logo::");
+
+    console.log(this.logo);
   }
 
 }

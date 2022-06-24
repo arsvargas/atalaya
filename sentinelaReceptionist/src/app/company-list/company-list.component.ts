@@ -12,4 +12,8 @@ export class CompanyListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  setLogoTemp(img: any):void{
+    localStorage.setItem("img", "../../assets/logoipsum-logo-" + img + ".svg");
+  }
+
 }
