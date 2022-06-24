@@ -6,12 +6,12 @@
                 Painel do Recepcionista
             </h3>
             <div class="form1">
-          <label for="entrar">Login</label>
-          <input type="text" id="entrar" placeholder="digite seu login">
+          <label for="entrar">Email</label>
+          <input type="text" [(ngModel)]="email" id="email" placeholder="digite seu email">
           <label for="password">Senha</label>
-          <input type="password" id="password" placeholder="digite sua senha">
+          <input type="password" [(ngModel)]="password" id="password" placeholder="digite sua senha">
           
-          <button type="submit" routerLink='/company-list'>Entrar</button>
+          <button type="submit" (click)="login()">Entrar</button>
              </div>
         </div>
     </div>

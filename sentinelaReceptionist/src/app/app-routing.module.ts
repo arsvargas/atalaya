@@ -15,28 +15,27 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
 import { AboutDoctorDayComponent } from './about-doctor-day/about-doctor-day.component';
 import { CompanyListComponent } from './company-list/company-list.component';
-
+import { RecepcionistHeaderComponent } from './recepcionist-header/recepcionist-header.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'receptionist-panel', component: ReceptionistPanelComponent },
-  { path: 'patient-register', component: PatientRegisterComponent },
-  { path: 'schedule-register', component: ScheduleRegisterComponent },
-  { path: 'chat-alert', component: ChatAlertComponent },
-  { path: 'about-patient', component: AboutPatientComponent },
-  { path: 'doctor-schedule', component: DoctorScheduleComponent },
-  { path: 'patient-schedule', component: PatientScheduleComponent },
-  { path: 'chat', component: ChatComponent },
-  { path: 'patient-schedule-register', component: PatientScheduleRegisterComponent },
-  { path: 'header-menu', component: HeaderMenuComponent },
-  { path: 'footer', component: FooterComponent },
-  { path: 'about-doctor', component: AboutDoctorComponent },
-  { path: 'about-doctor-day', component: AboutDoctorDayComponent },
-  { path: 'company-list', component: CompanyListComponent },
-
-
-
-
+  { path: 'receptionist-panel', component: ReceptionistPanelComponent, canActivate:[AuthGuardService] },
+  { path: 'patient-register', component: PatientRegisterComponent, canActivate:[AuthGuardService] },
+  { path: 'schedule-register', component: ScheduleRegisterComponent, canActivate:[AuthGuardService] },
+  { path: 'chat-alert', component: ChatAlertComponent, canActivate:[AuthGuardService] },
+  { path: 'about-patient', component: AboutPatientComponent, canActivate:[AuthGuardService] },
+  { path: 'doctor-schedule', component: DoctorScheduleComponent, canActivate:[AuthGuardService] },
+  { path: 'patient-schedule', component: PatientScheduleComponent, canActivate:[AuthGuardService] },
+  { path: 'chat', component: ChatComponent, canActivate:[AuthGuardService] },
+  { path: 'patient-schedule-register', component: PatientScheduleRegisterComponent, canActivate:[AuthGuardService] },
+  { path: 'header-menu', component: HeaderMenuComponent, canActivate:[AuthGuardService] },
+  { path: 'footer', component: FooterComponent, canActivate:[AuthGuardService] },
+  { path: 'about-doctor', component: AboutDoctorComponent, canActivate:[AuthGuardService] },
+  { path: 'about-doctor-day', component: AboutDoctorDayComponent, canActivate:[AuthGuardService] },
+  { path: 'company-list', component: CompanyListComponent, canActivate:[AuthGuardService] },
+  { path: 'recepcionist-header', component: RecepcionistHeaderComponent, canActivate:[AuthGuardService]},
+  
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

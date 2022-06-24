@@ -1,0 +1,33 @@
+
+nav {
+    background-color: rgb(10,80,107);
+    box-shadow: rgb(10,80,107) 3px 3px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink:2;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.logo-empresa{
+    width: 100px;    
+    margin-right: 10px;
+}
+
+
+@media (max-width: 710px) {
+    
+
+    nav {
+        flex-direction: column;        
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: -50px;
+    }
+}

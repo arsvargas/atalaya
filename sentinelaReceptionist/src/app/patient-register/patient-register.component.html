@@ -2,7 +2,7 @@
 
 <div class="main-container">
   <h3>Cadastro do Paciente</h3>
-  <form>
+  <form [formGroup]="patientForm">
 
     <div class="form-in">
       <label for="">Nome Completo</label>
@@ -66,18 +66,18 @@
 
     <div class="form-in">
       <label for="cep">CEP</label>
-      <input type="text" name="cep" formControlName="mask" [brmasker]="{mask:'00.000-000', len:10}" required>
+      <input type="text" name="cep" [brmasker]="{mask:'00.000-000', len:10}" required>
     </div>
 
     <div class="form-in">
       <label for="telefone">Telefone</label>
-      <input type="tel" name="phone" formControlName="mask" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}" required>
+      <input type="tel" name="phone"  placeholder=" (55) 55555-5555" [brmasker]="{phone: true}" required>
 
     </div>
 
     <div class="form-in">
       <label for="cpf">CPF</label>
-      <input type="text" name="cpf" formControlName="mask" [brmasker]="{person: true}" required>
+      <input type="text" name="cpf" [brmasker]="{person: true}" required>
     </div>
 
     <div class="form-in">

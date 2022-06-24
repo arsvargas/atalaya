@@ -19,7 +19,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
 import { AboutDoctorDayComponent } from './about-doctor-day/about-doctor-day.component';
 import { CompanyListComponent } from './company-list/company-list.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RecepcionistHeaderComponent } from './recepcionist-header/recepcionist-header.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,12 +41,16 @@ import { CompanyListComponent } from './company-list/company-list.component';
     FooterComponent,
     AboutDoctorComponent,
     AboutDoctorDayComponent,
-    CompanyListComponent
+    CompanyListComponent,
+    RecepcionistHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrMaskerModule
+    BrMaskerModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
