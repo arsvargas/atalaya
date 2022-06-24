@@ -196,16 +196,12 @@ input[type="checkbox"] {
         position: absolute;
     }
     nav {
-        flex-direction: column;
-        
+        flex-direction: column;        
     }
-    
-    
-    
-    
     ul {
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin-left: -50px;
     }
 }

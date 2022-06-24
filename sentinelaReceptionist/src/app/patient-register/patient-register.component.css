@@ -3,7 +3,6 @@
 .main-container {
     display: flex;
     flex-direction: column;
-
     width: 700px;
     margin: 0 auto;
     margin-top: 50px;
@@ -37,7 +36,6 @@
 
 .main-container form .form-in label{
     display: flex;
-
     margin: auto 0;
     margin-right: 10px;
     flex-wrap: nowrap;

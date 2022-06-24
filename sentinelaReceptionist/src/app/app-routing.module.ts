@@ -14,7 +14,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutDoctorComponent } from './about-doctor/about-doctor.component';
 import { AboutDoctorDayComponent } from './about-doctor-day/about-doctor-day.component';
-
+import { CompanyListComponent } from './company-list/company-list.component';
 
 
 const routes: Routes = [
@@ -32,6 +32,8 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: 'about-doctor', component: AboutDoctorComponent },
   { path: 'about-doctor-day', component: AboutDoctorDayComponent },
+  { path: 'company-list', component: CompanyListComponent },
+
 
 
 

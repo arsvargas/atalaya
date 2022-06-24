@@ -22,6 +22,7 @@ i:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .mainbody span{
@@ -42,7 +43,7 @@ i:hover{
 a{
     cursor: pointer;
 }
-.card-container, .front, .back {
+.card-container, .front, .back, .front-today{
 	width: 110px;
 	height: 90px;
 }
@@ -59,7 +60,7 @@ a{
     font-weight: 200;
     font-size: 15px;
 }
-.front, .back {
+.front, .front-today, .back {
 	box-sizing: border-box;
 	border-radius: 10px;
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
@@ -97,7 +98,7 @@ a{
 	position: relative;
 }
 
-.front, .back {
+.front, .front-today, .back {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -114,6 +115,10 @@ a{
 	transform: rotateY(-180deg);
 }
 
+.card-container:hover .front-today{
+    transform: rotateY(-180deg);
+}
+
 .card-container:hover .back {
 	transform: rotateY(0deg);
 }
@@ -125,5 +130,8 @@ a{
 @media (max-width: 710px){
     .container{
         width: 300px;
+    }
+    span{
+        margin-top: 30px;
     }
 }
