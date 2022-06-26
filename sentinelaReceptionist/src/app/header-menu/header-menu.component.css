@@ -12,6 +12,7 @@ nav {
     flex-shrink:2;
     justify-content: space-around;
     width: 100%;
+    height: 60px;
     align-items: center;
 }
 
@@ -26,7 +27,8 @@ nav {
 }
 
 ul {    
-    display: flex;position: relative;
+    display: flex;
+    position: relative;
     flex-wrap: nowrap;
     flex-shrink: 3;
     width: 100%;
@@ -73,42 +75,52 @@ ul li a:hover {
     align-self: flex-start;   
 }
 
-i{
-    opacity: 0;
-    position: absolute;
-    align-self: flex-start;
-    color: #fff;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-}
 
 input[type="checkbox"] {
     opacity: 0;
 }
 
+ul button{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: rgb(82,147,175);
+    border: #fff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+ul button:hover{
+    background-color: rgb(19,158,188);
+}
+
+ul button i{
+    color: #fff;
+    font-size: 24px;
+}
+
 
 @media (max-width: 710px) {
-    label{
-        width: 30px;
-        height: 55px;
-        
-    }
-    body{
-        display: block;
-    }
-    i{color: rgb(10,80,107);
-        opacity: 1;
-        z-index: 1;
-        position: absolute;
-    }
+    
     nav {
-        flex-direction: column;        
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 120px;        
     }
     ul {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: -50px;
+    }
+
+    ul li{
+        margin-left: -20px;
+    }
+
+    ul button{
+        margin-bottom: 10px;
+        width: 200px;
     }
 }

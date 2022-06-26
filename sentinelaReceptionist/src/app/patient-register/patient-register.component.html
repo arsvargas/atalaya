@@ -6,7 +6,7 @@
 
     <div class="form-in">
       <label for="">Nome Completo</label>
-      <input type="text" maxlength="10" required>
+      <input type="text" formControlName="name" maxlength="40" >
     </div>
 
     <div class="form-in">
@@ -77,7 +77,7 @@
 
     <div class="form-in">
       <label for="cpf">CPF</label>
-      <input type="text" name="cpf" [brmasker]="{person: true}" required>
+      <input type="text" name="cpf" formControlName="cpf" [brmasker]="{person: true}">
     </div>
 
     <div class="form-in">
@@ -110,12 +110,12 @@
 
     <div class="form-in">
       <label for="email">Email</label>
-      <input type="email" required>
+      <input type="email" formControlName="email">
     </div>
 
 
   </form>
-  <button type="submit" routerLink='/about-patient'>Cadastrar</button>
+  <button type="submit" (click)="post()">Cadastrar</button>
 
 </div>
 

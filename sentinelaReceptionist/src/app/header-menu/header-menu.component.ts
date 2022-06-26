@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-menu',
@@ -13,7 +14,7 @@ export class HeaderMenuComponent implements OnInit {
   pesquisarPaciente: any;
   logo:any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.checkLightedButton();
@@ -82,6 +83,11 @@ export class HeaderMenuComponent implements OnInit {
     console.log("logo::");
 
     console.log(this.logo);
+  }
+
+  logOut() {
+    sessionStorage.clear()
+    this.router.navigate(['home'])
   }
 
 }

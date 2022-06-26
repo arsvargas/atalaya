@@ -7,27 +7,80 @@ nav {
     flex-direction: row;
     flex-wrap: nowrap;
     flex-shrink:2;
-    justify-content: space-around;
     width: 100%;
+    height: 60px;
     align-items: center;
 }
 
 .logo-empresa{
-    width: 100px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 200px;    
     margin-right: 10px;
+}
+
+ul {    
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    flex-shrink: 3;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(10,80,107);
+    box-shadow: rgb(10,80,107) 3px 3px 10px;
+    margin: auto 0;
+}
+
+ul button{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: rgb(82,147,175);
+    border: #fff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+ul button:hover{
+    background-color: rgb(19,158,188);
+}
+
+ul button i{
+    color: #fff;
+    font-size: 24px;
 }
 
 
 @media (max-width: 710px) {
-    
-
     nav {
-        flex-direction: column;        
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 50px;        
     }
     ul {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: -50px;
+    }
+
+    ul li{
+        margin-left: -20px;
+    }
+    .logo-empresa{
+        margin-top: 20px;
+        margin-left: -20px;
+        margin-bottom: 30px;
+
+    }
+
+    ul button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
     }
 }

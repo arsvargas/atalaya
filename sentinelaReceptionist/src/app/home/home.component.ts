@@ -31,8 +31,16 @@ export class HomeComponent implements OnInit {
       },
       error => {
         console.log(error);
+        alert('Acesso Negado!')
       }
       );
+  }
+
+
+  loginf(): void {
+    sessionStorage.setItem("logged", "true");    
+       
+        this.route.navigateByUrl('/company-list');
   }
 
 }

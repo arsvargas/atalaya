@@ -61,6 +61,8 @@ opacity: 0.8;
     background-color: rgb(19,158,188);
 }
 
+
+
 @media (max-width: 600px){
     .center{
         width: 350px;
