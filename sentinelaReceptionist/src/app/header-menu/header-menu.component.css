@@ -107,7 +107,8 @@ ul button i{
     nav {
         flex-direction: column;
         position: relative;
-        margin-bottom: 120px;        
+        margin-bottom: 120px;
+        margin-top: 150px;        
     }
     ul {
         width: 100%;
@@ -116,11 +117,15 @@ ul button i{
     }
 
     ul li{
+
         margin-left: -20px;
     }
 
     ul button{
         margin-bottom: 10px;
         width: 200px;
+    }
+    .logo-empresa{
+        margin-top: 5px;
     }
 }

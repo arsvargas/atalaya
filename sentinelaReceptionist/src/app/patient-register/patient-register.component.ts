@@ -6,32 +6,41 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './patient-register.component.html',
   styleUrls: ['./patient-register.component.css']
 })
-export class PatientRegisterComponent implements OnInit {
 
-  patientForm: FormGroup;
+export class PatientRegisterComponent implements OnInit { 
+
+  patientFormGroup: FormGroup;
  
-  constructor(fb: FormBuilder, private formBuilder: FormBuilder) {   this.patientForm = fb.group({
-    dob: ["", Validators.required],
-
-    this:this.patientForm = this.formBuilder.group({
+  constructor(private formBuilder: FormBuilder) { 
+     
+     this.patientFormGroup = this.formBuilder.group({  
+    
       name: ['', Validators.required],
       email: ['', [
         Validators.required,
         Validators.email
       ]],
-      cpf: ['', Validators.required]
-    })
-  });}
+      cpf: ['', Validators.required],
+      rg: ['', Validators.required],
+      adress: ['', Validators.required],
+      city: ['', Validators.required],
+      date: ['', Validators.required],
+      district: ['', Validators.required],
+      cep: ['', Validators.required],
+      telephone: ['', Validators.required]
+
+    });
+  }
 
   ngOnInit(): void {    
   }
 
   post() {
-    if (!this.patientForm.valid) {
-      console.log("Formulário invalido!");
+    if (!this.patientFormGroup.valid) {
+      alert("Formulário inválido!");
       return;
     }
-    console.log("Formulário válido!", this.patientForm.value);
+    alert("Formulário válido!");
   }
 
 }

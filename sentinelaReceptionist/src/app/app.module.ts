@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RecepcionistHeaderComponent } from './recepcionist-header/recepcionist-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrMaskerModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

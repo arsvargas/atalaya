@@ -2,17 +2,21 @@
 
 <div class="main-container">
   <h3>Cadastro do Paciente</h3>
-  <form [formGroup]="patientForm">
+  <form [formGroup]="patientFormGroup">
 
     <div class="form-in">
       <label for="">Nome Completo</label>
-      <input type="text" formControlName="name" maxlength="40" >
+      <input type="text" formControlName="name" maxlength="40" minlength="5">
     </div>
+    <span *ngIf="patientFormGroup.controls['name'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="">Endereço</label>
-      <input type="text" required>
+      <input type="text" formControlName="adress" minlength="8">
     </div>
+    <span *ngIf="patientFormGroup.controls['adress'].errors">Campo obrigatório!</span>
+
 
 
     <div class="form-in">
@@ -47,47 +51,66 @@
         <option value="TO">Tocantins</option>
         <option value="EX">Estrangeiro</option>
       </select>
+
     </div>
 
     <div class="form-in">
       <label for="">Cidade</label>
-      <input type="text">
+      <input type="text" formControlName="city" minlength="5">
     </div>
+    <span *ngIf="patientFormGroup.controls['city'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="">Data de nascimento</label>
-      <input type="date">
+      <input type="date" formControlName="date">
     </div>
+    <span *ngIf="patientFormGroup.controls['date'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="bairro">Bairro</label>
-      <input type="text" required>
+      <input type="text" formControlName="district" minlength="5">
     </div>
+    <span *ngIf="patientFormGroup.controls['district'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="cep">CEP</label>
-      <input type="text" name="cep" [brmasker]="{mask:'00.000-000', len:10}" required>
+      <input type="text" name="cep" [brmasker]="{mask:'00.000.000', len:10}" minlength="10" formControlName="cep" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
+    <span *ngIf="patientFormGroup.controls['cep'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="telefone">Telefone</label>
-      <input type="tel" name="phone"  placeholder=" (55) 55555-5555" [brmasker]="{phone: true}" required>
-
+      <input type="tel" name="phone" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}"
+        formControlName="telephone">
     </div>
+    <span *ngIf="patientFormGroup.controls['telephone'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="cpf">CPF</label>
-      <input type="text" name="cpf" formControlName="cpf" [brmasker]="{person: true}">
+      <input type="text" name="cpf" formControlName="cpf" [brmasker]="{mask:'000.000.000-00', len:14}" minlength="14" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
+    <span *ngIf="patientFormGroup.controls['cpf'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="rg">RG</label>
-      <input type="text" name="rg" maxlength="10" required>
+      <input type="text" name="rg" maxlength="10" formControlName="rg" minlength="10"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
+    <span *ngIf="patientFormGroup.controls['rg'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="sus">Num. cart. SUS</label>
-      <input type="text" maxlength="15" [brmasker]="{mask:'000000000000000', len:15}">
+      <input type="text" maxlength="15" [brmasker]="{mask:'000000000000000', len:15}"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
 
     <div class="form-in">
@@ -112,6 +135,10 @@
       <label for="email">Email</label>
       <input type="email" formControlName="email">
     </div>
+    <span *ngIf="patientFormGroup.controls['email'].errors">Campo obrigatório!</span>
+    <span id="valid-email" *ngIf="patientFormGroup.controls['email'].errors?.['email']">
+      E-mail inválido
+  </span>
 
 
   </form>
