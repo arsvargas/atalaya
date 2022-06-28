@@ -18,6 +18,7 @@
 }
 
 .search-field{
+    width: 100%;
     color: rgb(10,80,107);
     display: flex;
     flex-wrap: nowrap;
@@ -26,13 +27,9 @@
     margin: 20px;
 }
 
-.search-field label{
-    margin: auto 0;
-    font-weight: 700;
-    font-size: 24px;
-}
 
 .search-field input{
+    width: 100%;
     border-radius: 15px;
     border: 1px solid grey;
     margin-left: 10px;
@@ -75,7 +72,30 @@
     border: 1px solid rgb(19,158,188);
 }
 
+.center ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 5px;
+}
 
+.center ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: -35px;
+    box-shadow: grey 0px 2px 3px 0px;
+    text-align: center;
+    color: rgb(10, 80, 107);
+}
+
+.center ul li:hover{
+    background-color: rgb(19, 158, 188);
+    color: #fff;
+}
 
 
 @media (max-width: 600px){

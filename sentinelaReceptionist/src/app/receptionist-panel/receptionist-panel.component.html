@@ -2,15 +2,20 @@
 <div class="main">
 <div class="center">
     <div class="search-field">
-        <label for="search">Pesquisar Paciente</label>
-        <input id="search" type="search">
-        <button routerLink="/about-patient"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <input id="search" type="search" placeholder="Pesquisar Paciente">
+        <button routerLink="/patient-schedule"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
 
     
 </div>
 <div class="center">
-    <span>Resultado da Pesquisa</span><br><br><br><br><br><br>
+    <span>Resultado da Pesquisa</span>
+    <ul>
+        <li routerLink="/patient-schedule" >Paciente 1 </li>
+        <li routerLink="/patient-schedule" >Paciente 2 </li>
+        <li routerLink="/patient-schedule" >Paciente 3 </li>
+        <li routerLink="/patient-schedule" >Paciente 4 </li>
+      </ul>
 </div>
 </div>
 

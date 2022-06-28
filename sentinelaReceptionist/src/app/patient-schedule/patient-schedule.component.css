@@ -1,0 +1,83 @@
+.main-container{
+    display: flex;
+    background-color: #fff;
+    min-height: 90vh;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 3;
+}
+.sect-left{
+    display: flex;
+    flex-direction: column;
+    min-width: 35%;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+}
+
+.sect-left .box h3{
+    padding: 10px;
+    border-bottom: 1px dotted rgb(10,80,107);
+    color: rgb(10,80,107);
+    text-align: center;
+}
+
+.sect-left .box li{
+    color: rgb(10,80,107);
+    text-transform: capitalize;
+    display: flex;
+    margin: 10px;
+
+}
+
+.sect-right{
+    display: flex;
+    flex-direction: column;
+    min-width: 35%;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 1px solid rgb(10,80,107);
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+    
+}
+.sect-right .box h3 {
+    text-align: center;
+    margin: 20px;
+    color: rgb(10,80,107);
+}
+
+.sect-right .box li{
+    color: rgb(10,80,107);
+    text-align: center;
+    padding: 5px;
+}
+.sect-right .box li:hover{
+    background-color: rgb(19,158,188);
+    color: #fff;
+    transition: 0.3s;
+}
+
+@media (max-width: 917px){
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sect-left{
+        margin-top: 30px;
+    }
+    .box{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        min-width: 350px;
+    }
+    
+}
