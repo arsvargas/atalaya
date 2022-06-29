@@ -1,0 +1,40 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    
+}
+.central-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.emergency-room{
+    border: 1px solid rgb(10,80,107);
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 50px;
+    color: rgb(10,80,107);
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.consultations-in-progress{
+    border: 1px solid rgb(10,80,107);
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 50px;
+    margin-left: 50px;
+    color: rgb(10,80,107);
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+@media (max-width: 710px){
+    
+}
