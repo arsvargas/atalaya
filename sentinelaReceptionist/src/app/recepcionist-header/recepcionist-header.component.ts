@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class RecepcionistHeaderComponent implements OnInit {
 
-  email:any;
+  name:any;
 
   constructor(private http: HttpClient, private router: Router) {
     this.getEmail(); 
@@ -20,7 +20,7 @@ export class RecepcionistHeaderComponent implements OnInit {
   }
 
   getEmail():void {
-    this.email = sessionStorage.getItem("email");
+    this.name = sessionStorage.getItem("name");
   }
 
   logOut() {

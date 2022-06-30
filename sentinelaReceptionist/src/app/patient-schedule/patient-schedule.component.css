@@ -55,12 +55,18 @@
     color: rgb(10,80,107);
 }
 
-.sect-right .box li{
-    color: rgb(10,80,107);
-    text-align: center;
-    padding: 5px;
+.sect-right .box table {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+
 }
-.sect-right .box li:hover{
+.sect-right .box tr{
+    color: rgb(10,80,107);
+    text-align: start;
+    padding: 20px;
+}
+.sect-right .box tr:hover{
     background-color: rgb(19,158,188);
     color: #fff;
     transition: 0.3s;

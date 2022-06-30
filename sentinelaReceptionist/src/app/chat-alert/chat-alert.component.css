@@ -36,5 +36,20 @@
 
 }
 @media (max-width: 710px){
-    
+    .main-container{
+        flex-direction: column;
+    }
+    .central-box{
+        flex-direction: column;
+        min-width: 370px;
+    }
+    .emergency-room{
+        text-align: center;
+        margin: 20px;
+    }
+    .consultations-in-progress{
+        text-align: center;
+        margin: 20px;
+
+    }
 }
