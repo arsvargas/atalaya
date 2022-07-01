@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
             sessionStorage.setItem("name", response.user.name);
             this.route.navigateByUrl('/company-list');
           } else {
-            alert('Acesso Negado!')
+            alert('Seu usuário não está cadastrado como recepcionista, por favor entre em contato com a administração.')
           }
         },
         error => {
@@ -47,7 +47,8 @@ export class HomeComponent implements OnInit {
     let isRole: boolean;
     isRole = false;
     this.roles.forEach((element: any) => {
-      if ("receptionist" == element.name) {
+      if ("receptionist" ==
+       element.name) {
         isRole = true;
       }
     });
