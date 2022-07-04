@@ -17,6 +17,12 @@
     
 }
 
+h3{
+    color: rgb(10,80,107);
+    padding: 5px;
+    font-weight: 700;
+}
+
   ul {
     width: 100%;
     display: flex;
