@@ -73,6 +73,9 @@
 }
 
 @media (max-width: 917px){
+    .sect-left:first-child{
+        margin-top: 150px;
+    }
     .main-container{
         flex-direction: column;
         align-items: center;

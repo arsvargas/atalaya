@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
-const baseUrl = 'http://161.35.255.151/api';
+const baseUrl = 'https://api.segnuv.com.br/api';
 
 
 @Injectable({

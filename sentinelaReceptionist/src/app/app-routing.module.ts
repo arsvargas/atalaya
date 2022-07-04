@@ -17,6 +17,8 @@ import { AboutDoctorDayComponent } from './about-doctor-day/about-doctor-day.com
 import { CompanyListComponent } from './company-list/company-list.component';
 import { RecepcionistHeaderComponent } from './recepcionist-header/recepcionist-header.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { EmergencyRoomComponent } from './emergency-room/emergency-room.component';
+import { ConsultationsInProgressComponent } from './consultations-in-progress/consultations-in-progress.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -35,6 +37,9 @@ const routes: Routes = [
   { path: 'about-doctor-day', component: AboutDoctorDayComponent, canActivate:[AuthGuardService] },
   { path: 'company-list', component: CompanyListComponent, canActivate:[AuthGuardService] },
   { path: 'recepcionist-header', component: RecepcionistHeaderComponent, canActivate:[AuthGuardService]},
+  { path: 'emergency-room', component: EmergencyRoomComponent, canActivate:[AuthGuardService]},
+  { path: 'consultations-in-progress', component: ConsultationsInProgressComponent, canActivate:[AuthGuardService]},
+
   
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

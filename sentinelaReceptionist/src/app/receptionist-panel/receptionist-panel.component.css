@@ -99,8 +99,12 @@
 
 
 @media (max-width: 600px){
+    .center:first-child{
+        margin-top: 150px;
+    }
     .center{
         width: 350px;
+      
     }
     .search-field{
         flex-direction: column;

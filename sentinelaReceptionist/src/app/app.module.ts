@@ -24,6 +24,8 @@ import { FormsModule } from '@angular/forms';
 import { RecepcionistHeaderComponent } from './recepcionist-header/recepcionist-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { EmergencyRoomComponent } from './emergency-room/emergency-room.component';
+import { ConsultationsInProgressComponent } from './consultations-in-progress/consultations-in-progress.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { CommonModule } from '@angular/common';
     AboutDoctorComponent,
     AboutDoctorDayComponent,
     CompanyListComponent,
-    RecepcionistHeaderComponent
+    RecepcionistHeaderComponent,
+    EmergencyRoomComponent,
+    ConsultationsInProgressComponent
   ],
   imports: [
     BrowserModule,
