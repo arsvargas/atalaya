@@ -84,3 +84,15 @@
 .submenu li:hover{
     background-color: rgb(19, 157, 188);
 }
+
+@media (max-width: 600px){
+    .main-container{
+        min-height: 70vh;
+    }
+    .service-queue{
+        width: 350px;
+    }
+    .submenu{
+        margin-left: 60px;
+    }
+}
