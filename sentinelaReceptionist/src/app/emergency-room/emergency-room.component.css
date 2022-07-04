@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 90vh;
 }
 
 .service-queue{
@@ -16,7 +17,7 @@
     margin-top: 200px;
 }
 
-.service-queue ul{
+  ul {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,23 +27,60 @@
     margin-left: -30px;
 }
 
-.service-queue ul li {
+
+.menu > li {
+    float: left;
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 10px;
     border-radius: 3px;
+    margin-top: 10px;
 }
-.service-queue ul li:hover{
-    background-color: rgb(19,158,188);
+.menu span{
+    color: rgb(10,80,107);
+    font-weight: 500;
+    align-self: center;
+}
+.menu button {
+    border: 0;
+    background: rgb(10,80,107);
     color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+.menu button:hover,
+.menu button:focus {
+    outline: 0;
+    background-color: rgb(19, 157, 188);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    width: 250px;
+    margin-left: 200px;
+    margin-top: 35px;
+    color: #fff;
+    font-size: 13px;
     transition: 0.3s;
+    align-items: flex-end;
+    padding-left: 0;
 }
-
-.dropdown-sec{
-    display: flex;
-    flex-direction: column;
+.submenu li{
+    background-color: rgb(10,80,107);
+    justify-content: left;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 1px;
 }
-.dropdown{
-
+.menu button:focus + .submenu,
+.submenu:hover {
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.submenu li:hover{
+    background-color: rgb(19, 157, 188);
 }
