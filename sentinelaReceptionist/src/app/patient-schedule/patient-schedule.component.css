@@ -49,6 +49,16 @@
     flex-shrink: 3;
     
 }
+.box input{
+    color: rgb(10,80,107);
+    width: 400px;
+    padding: 10px;
+    
+    margin: 5px;
+    align-self: center;
+    border-radius: 3px;
+    font-size: 15px;
+}
 .sect-right .box h3 {
     text-align: center;
     margin: 20px;
@@ -71,6 +81,12 @@
     color: #fff;
     transition: 0.3s;
 }
+td a{
+    text-decoration: underline;
+}
+td i{
+    font-size: 24px;
+}
 
 @media (max-width: 917px){
     .sect-left:first-child{
@@ -90,5 +106,7 @@
         margin-top: 20px;
         width: 350px;
     }
-    
+    .box input{
+        width: 340px;
+    }
 }
