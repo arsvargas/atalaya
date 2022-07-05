@@ -12,7 +12,6 @@
     border-radius: 10px;
     margin-top: 30px;
     color: rgb(10,80,107);
-    font-size: 30px;
     cursor: pointer;
     font-weight: bold;
     min-width: 500px;
@@ -24,51 +23,78 @@ h3{
     padding: 5px;
     font-weight: 700;
 }
-.consultations-box ul {
+
+
+ul {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-right: 5px;
-    padding: 10px;
+    margin-left: -30px;
 }
-.consultations-box ul li{
+
+
+.menu > li {
+    float: left;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 3px;
-    padding: 5px;
-    font-weight: 100;
-    font-size: 18px;
-    align-items: center;
-}
-.consultations-box ul li .button{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    border: rgb(10,80,107) 1px solid;
-    border-radius: 3px;
-    font-size: 18px;
     padding: 10px;
-    background-color: rgb(10,80,107);
-    color: #fff;
-    font-weight: 100;
-
-}
-.consultations-box ul li .button i{
-    margin-right: 5px;
-}
-.consultations-box ul li .button:hover{
-    background-color: rgb(82,147,175);
-    border: #fff 1px solid;
-}
-.consultations-box ul li:hover{
-    background-color: rgb(19, 157, 188);
-    color: #fff;
-    transition: 0.3s;
     border-radius: 3px;
+    margin-top: 10px;
+}
+.menu span{
+    color: rgb(10,80,107);
+    font-weight: 500;
+    align-self: center;
+}
+.menu button {
+    border: 0;
+    background: rgb(10,80,107);
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+}
+i{
+    margin-left: 5px;
+    font-size: 24px;
+}
+.menu button:hover,
+.menu button:focus {
+    outline: 0;
+    background-color: rgb(19, 157, 188);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    width: 250px;
+    margin-left: 200px;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 13px;
+    transition: 0.3s;
+    align-items: flex-end;
+    padding-left: 0;
+}
+.submenu li{
+    background-color: rgb(10,80,107);
+    justify-content: left;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 1px;
+}
+.menu button:focus + .submenu,
+.submenu:hover {
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.submenu li:hover{
+    background-color: rgb(19, 157, 188);
 }
 @media (max-width: 600px){
     .main-container{
@@ -76,6 +102,12 @@ h3{
     }
     .consultations-box{
         min-width: 350px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    .submenu{
+        margin-left: 60px;
     }
     
 }
