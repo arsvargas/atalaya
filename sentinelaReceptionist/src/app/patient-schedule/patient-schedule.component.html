@@ -1,34 +1,56 @@
 <app-header-menu></app-header-menu>
 
 <div class="main-container">
-    
-    <div class="sect-left">
-        <div class="box">
-            <h3>Informações do paciente</h3>
-            <li>nome</li>
-            <li>endereco</li>
-            <li>estado</li>
-            <li>cidade</li>
-            <li>bairro</li>
-            <li>telefone</li>
-            <li>cpf</li>
-            <li>rg</li>
-            <li>sus</li>
-            <li>convenio</li>
-            <li>etc</li>
-            <li>etc</li>
-            <li>etc</li>
-            <li>etc</li>
+    <div class="first">
+        <div class="sect-left">
+            <div class="box">
+                <h3>Informações do paciente <i class="fa fa-pencil-square-o" aria-hidden="true" routerLink="/patient-register"></i>
+                </h3>
+                <li>nome</li>
+                <li>endereco</li>
+                <li>estado</li>
+                <li>cidade</li>
+                <li>bairro</li>
+                <li>telefone</li>
+                <li>cpf</li>
+                <li>rg</li>
+                <li>sus</li>
+                <li>convenio</li>
+                <li>etc</li>
+                <li>etc</li>
+                <li>etc</li>
+                <li>etc</li>
+            </div>
         </div>
-    </div>
-    
-    <div class="sect-right">
-        <div class="box">
+
+        <div class="sect-right">
+            <div class="box">
                 <h3>Histórico de Consultas</h3>
                 <table>
                     <tr>
                         <th>Data</th>
                         <th>Nome do médico</th>
+                        <th>Especialidade</th>
+                    </tr>
+                    <tr routerLink="/about-patient">
+                        <td>22/05/22</td>
+                        <td>João Silva</td>
+                        <td>Clínico Geral</td>
+                    </tr>
+                    <tr>
+                        <td>22/05/22</td>
+                        <td>Josué</td>
+                        <td>Clínico Geral</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box">
+                <h3>Consultas agendadas</h3>
+                <table>
+                    <tr>
+                        <th>Data</th>
+                        <th>Médico</th>
                         <th>Especialidade</th>
                     </tr>
                     <tr>
@@ -42,50 +64,57 @@
                         <td>Clínico Geral</td>
                     </tr>
                 </table>
-        </div>
-        
-        <div class="box">
-            <h3>Consultas agendadas</h3>
-            <table>
-                <tr>
-                    <th>Data</th>
-                    <th>Médico</th>
-                    <th>Especialidade</th>
-                </tr>
-                <tr>
-                    <td>22/05/22</td>
-                    <td>João Silva</td>
-                    <td>Clínico Geral</td>
-                </tr>
-                <tr>
-                    <td>22/05/22</td>
-                    <td>Josué</td>
-                    <td>Clínico Geral</td>
-                </tr>
-            </table>
-        </div>
+            </div>
 
 
+
+        </div>
+    </div>
+    <div class="sect-end">
         <div class="box">
             <h3>Exames</h3>
-            <input type="file" name="upload" accept="application/pdf" />
             <table>
                 <tr>
                     <th>Data</th>
                     <th>Tipo de exame</th>
                     <th>Status</th>
+                    <th>Arquivo</th>
                 </tr>
                 <tr>
                     <td>22/05/22</td>
                     <td>Endoscopia</td>
-                    <td><a href="https://www.buds.com.ua/images/Lorem_ipsum.pdf">Enviado <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a></td>
+                    <td>Enviado</td>
+                    <td><a href="https://www.buds.com.ua/images/Lorem_ipsum.pdf"><i class="fa fa-file-pdf-o"
+                        aria-hidden="true"></i></a></td>
                 </tr>
                 <tr>
                     <td>26/05/22</td>
                     <td>Sangue</td>
                     <td>Solicitado</td>
+                    <td><label for="upload">Upload</label>
+                        <input type="file" id="upload" name="upload" accept="application/pdf" /></td>
                 </tr>
             </table>
+
+            <table class="request">
+
+                <tr>
+                    <th><input type="date" name="" id=""></th>
+                    <th><select name="" id="">
+                            <option value="">Hemograma</option>
+                            <option value="">Endoscopia</option>
+                            <option value="">Transaminases (ALT e AST) ou TGP e TGO</option>
+                            <option value="">Glicemia</option>
+                            <option value="">Colesterol</option>
+                        </select></th>
+                    <th class="buttons"><button type="submit">Solicitar</button>
+                        <label for="upload">Upload</label>
+                        <input type="file" id="upload" name="upload" accept="application/pdf" />
+                    </th>
+                </tr>
+
+            </table>
+
         </div>
     </div>
 
