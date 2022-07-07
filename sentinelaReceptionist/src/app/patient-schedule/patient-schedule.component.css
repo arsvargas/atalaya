@@ -174,12 +174,23 @@ input[type='file'] {
     text-align: center;
     margin-top: 3px;
     font-size: 12px;
+    cursor: pointer;
+
+}
+.sect-end .box td label:hover{
+    background-color: #fff;
+    color: rgb(10,80,107);
 }
 .sect-end .box td a{
     text-decoration: underline;
 }
 .sect-end .box td i{
     font-size: 24px;
+    color: rgb(10,80,107);
+    cursor: pointer;
+}
+.sect-end .box td i:hover{
+    color: #fff;
 }
 .request{
     width: 98%;
