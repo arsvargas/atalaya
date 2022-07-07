@@ -24,3 +24,12 @@ span{
 p{
     padding: 10px;
 }
+
+@media (max-width: 633px){
+    .box{
+        width: 350px;
+    }
+    span{
+        font-size: 20px;
+    }
+}
