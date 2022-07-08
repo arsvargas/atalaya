@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
           if (this.checkRecepcionistRole(response)) {
             sessionStorage.setItem("logged", response.success);
             sessionStorage.setItem("name", response.user.name);
+            sessionStorage.setItem("token", response.token);
             this.route.navigateByUrl('/company-list');
           } else {
             alert('Seu usuário não está cadastrado como recepcionista, por favor entre em contato com a administração.')

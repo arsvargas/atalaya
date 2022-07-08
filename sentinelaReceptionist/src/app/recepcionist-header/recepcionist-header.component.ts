@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient,  HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { ServiceAuthService } from '../services/service-auth.service';
 
 @Component({
   selector: 'app-recepcionist-header',
@@ -12,9 +12,10 @@ export class RecepcionistHeaderComponent implements OnInit {
 
   name:any;
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private authService: ServiceAuthService) {
     this.getEmail(); 
   }
+
 
   ngOnInit(): void {
   }
@@ -24,8 +25,11 @@ export class RecepcionistHeaderComponent implements OnInit {
   }
 
   logOut() {
-    sessionStorage.clear()
-    this.router.navigate(['home'])
+    this.authService.logOut(sessionStorage.getItem("token"))
+    .subscribe(() => console.log('LogOut successfully'));
+
+    sessionStorage.clear();
+    this.router.navigate(['home']);
   }
 
 }

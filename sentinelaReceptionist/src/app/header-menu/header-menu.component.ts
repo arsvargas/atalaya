@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceAuthService } from '../services/service-auth.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -14,7 +15,7 @@ export class HeaderMenuComponent implements OnInit {
   pesquisarPaciente: any;
   logo:any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: ServiceAuthService) { }
 
   ngOnInit(): void {
     this.checkLightedButton();
@@ -80,14 +81,12 @@ export class HeaderMenuComponent implements OnInit {
 
   getLogoTemp(){
     this.logo = localStorage.getItem("img");
-    console.log("logo::");
-
-    console.log(this.logo);
   }
 
   logOut() {
-    sessionStorage.clear()
-    this.router.navigate(['home'])
+    this.authService.logOut(sessionStorage.getItem("token"));
+    sessionStorage.clear();
+    this.router.navigate(['home']);
   }
 
 }

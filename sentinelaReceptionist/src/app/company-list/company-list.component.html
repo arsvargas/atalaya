@@ -1,24 +1,29 @@
 <app-recepcionist-header></app-recepcionist-header>
 <div class="main">
-    <div class="center">
-      <div class="search-field">
-        
-        <input id="search" type="search" placeholder="Pesquisar Empresa">
-        <button ><i class="fa fa-search" aria-hidden="true"></i></button>
-      </div>
-  
-  
+  <div class="center">
+    <div class="search-field">
+
+      <input id="search" type="search" placeholder="Pesquisar Empresa">
+      <button (click)="listCompany()"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
-    <div class="center">
-      <span>Resultado da Pesquisa</span>
-      <ul>
-        <li (click)="setLogoTemp(54)" routerLink="/receptionist-panel" >Empresa 1 <img src="../../assets/logoipsum-logo-54.svg"></li>
-        <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">Empresa 2 <img src="../../assets/logoipsum-logo-48.svg"></li>
-        <li routerLink="/receptionist-panel" (click)="setLogoTemp(55)">Empresa 3 <img src="../../assets/logoipsum-logo-55.svg"></li>
-        <li routerLink="/receptionist-panel" (click)="setLogoTemp(7)">Empresa 4 <img src="../../assets/logoipsum-logo-7.svg"></li>
-      </ul>
-  
-    </div>
+
+
   </div>
-  
-  <app-footer></app-footer>
+  <div class="center">
+    <span>Resultado da Pesquisa</span>
+    <ul *ngFor="let company of companies; index as i">
+
+      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">{{company.name}}<img
+          src={{company.image}}></li>
+    </ul>
+    <ul>
+
+      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">DUMY company<img
+          src="../../assets/logoipsum-logo-48.svg"></li>
+    </ul>
+
+
+  </div>
+</div>
+
+<app-footer></app-footer>

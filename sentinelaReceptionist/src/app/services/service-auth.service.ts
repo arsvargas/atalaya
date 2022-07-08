@@ -26,4 +26,20 @@ export class ServiceAuthService {
    return this.http.post(`${baseUrl}/auth/login`, loginUser);       
   }
 
+  logOut(token: any): Observable<any>  {
+    var reqHeader = new HttpHeaders({ 
+      'Authorization':"Bearer " + token
+   });
+   return this.http.delete(`${baseUrl}/auth/logout`, {headers : reqHeader});     
+  }
+
+
+  listCompanies(token: any): Observable<any> {
+    var reqHeader = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " + token
+   });
+    return this.http.get(`${baseUrl}/companies/me`, {headers : reqHeader});
+  }
+
 }
