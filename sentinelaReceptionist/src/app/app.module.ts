@@ -26,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { EmergencyRoomComponent } from './emergency-room/emergency-room.component';
 import { ConsultationsInProgressComponent } from './consultations-in-progress/consultations-in-progress.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ConsultationsInProgressComponent } from './consultations-in-progress/co
     ConsultationsInProgressComponent
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     BrMaskerModule,

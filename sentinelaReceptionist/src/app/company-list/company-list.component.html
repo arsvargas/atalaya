@@ -6,24 +6,22 @@
       <input id="search" type="search" placeholder="Pesquisar Empresa">
       <button (click)="listCompany()"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
-
-
+  </div>
+  <div class="pagination-top">
+    <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
   </div>
   <div class="center">
+
     <span>Resultado da Pesquisa</span>
-    <ul *ngFor="let company of companies; index as i">
+    <ul *ngFor="let company of listCompanies | paginate: { itemsPerPage: counter, currentPage: pag }  ">
 
-      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">{{company.name}}<img
-          src={{company.image}}></li>
+      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">{{company.name}}</li>
     </ul>
-    <ul>
-
-      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">DUMY company<img
-          src="../../assets/logoipsum-logo-48.svg"></li>
-    </ul>
-
-
+  </div>
+  <div class="pagination-bottom">
+    <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
   </div>
 </div>
+
 
 <app-footer></app-footer>

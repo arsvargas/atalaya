@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { company } from '../company-list/company';
 
 const baseUrl = 'https://api.segnuv.com.br/api';
 
@@ -39,7 +40,7 @@ export class ServiceAuthService {
       'Content-Type': 'application/json',
       'Authorization':"Bearer " + token
    });
-    return this.http.get(`${baseUrl}/companies/me`, {headers : reqHeader});
+    return this.http.get<company>(`${baseUrl}/companies/me`, {headers : reqHeader});
   }
 
 }

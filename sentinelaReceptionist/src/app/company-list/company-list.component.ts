@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceAuthService } from '../services/service-auth.service';
+import { company } from './company';
 
 @Component({
   selector: 'app-company-list',
@@ -8,14 +9,21 @@ import { ServiceAuthService } from '../services/service-auth.service';
 })
 export class CompanyListComponent implements OnInit {
 
-  companies: any;
+  listCompanies:company[];
+
+  pag : number = 1;
+  counter : number = 10;
+
   company: any;
 
   constructor(
     private companyListService: ServiceAuthService
-  ) { }
+  ) { 
+    this.listCompanies = [];
+  }
 
   ngOnInit(): void {
+    this.listCompany();
   }
 
   setLogoTemp(img: any):void{
@@ -27,8 +35,7 @@ export class CompanyListComponent implements OnInit {
     this.companyListService.listCompanies(sessionStorage.getItem("token"))
     .subscribe(
       data => {
-        console.log(data);
-        this.companies = data;
+        this.listCompanies = data;
       },
       error => {
         console.log(error);
