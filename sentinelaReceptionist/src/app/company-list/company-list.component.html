@@ -8,14 +8,14 @@
     </div>
   </div>
   <div class="pagination-top">
-    <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
+  <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
   </div>
   <div class="center">
 
     <span>Resultado da Pesquisa</span>
     <ul *ngFor="let company of listCompanies | paginate: { itemsPerPage: counter, currentPage: pag }  ">
 
-      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48)">{{company.name}}</li>
+      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48, company.id)">{{company.name}}</li>
     </ul>
   </div>
   <div class="pagination-bottom">

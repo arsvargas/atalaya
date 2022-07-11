@@ -26,8 +26,9 @@ export class CompanyListComponent implements OnInit {
     this.listCompany();
   }
 
-  setLogoTemp(img: any):void{
-    localStorage.setItem("img", "../../assets/logoipsum-logo-" + img + ".svg");
+  setLogoTemp(img: any, companyId: any):void{
+    sessionStorage.setItem("img", "../../assets/logoipsum-logo-" + img + ".svg");
+    sessionStorage.setItem("companyId", companyId);
   }
 
   listCompany(): void {
@@ -35,6 +36,7 @@ export class CompanyListComponent implements OnInit {
     this.companyListService.listCompanies(sessionStorage.getItem("token"))
     .subscribe(
       data => {
+        sessionStorage
         this.listCompanies = data;
       },
       error => {
