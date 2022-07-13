@@ -4,29 +4,24 @@
     <div class="first">
         <div class="sect-left">
             <div class="box">
-                <h3>Informações do paciente <i class="fa fa-pencil-square-o" aria-hidden="true" routerLink="/patient-register"></i>
+                <h3>Informações do paciente <i class="fa fa-pencil-square-o" aria-hidden="true" (click)="deletePatient(patient.name, patient.id)"></i>
                 </h3>
                 <li>Id: {{patient.id}}</li>
                 <li>Nome: {{patient.name}} {{patient.surname}}</li>
-                <li>Endereço: {{patient.address}}</li>
-                <li>Estado: {{patient.UF}}</li>
-                <li>Cidade: {{patient.city}}</li>
-                <li>Bairro: {{patient.district}}</li>
-                <li>Telefone: {{patient.phone}}</li>
-                <li>CPF: {{patient.CPF}}</li>
-                <li>RG: {{patient.RG}}</li>
-                <li>SUS: {{patient.SUS}}</li>
-                <li>Convenio: </li>
-                <li>Email: {{patient.email}}</li>
-                <li>etc {{patient.district}}</li>
-                <li>Bairro: {{patient.district}}</li>
-                <li>Telefone: {{patient.district}}</li>
-                <li>cpf {{patient.district}}</li>
-                <li>rg {{patient.district}}</li>
-                <li>sus {{patient.district}}</li>
-                <li>convenio {{patient.district}}</li>
-                <li>etc {{patient.district}}</li>
-                <li>etc {{patient.district}}</li>
+                <li>Endereço: {{patient.address == null ? 'Não informado' : patient.address}}</li>
+                <li>Número: {{patient.number == null ? 'Não informado' : patient.number}}</li>
+                <li>Complemento: {{patient.complement == null ? 'Não informado' : patient.complement}}</li>
+                <li>Estado: {{patient.UF == null ? 'Não informado' : patient.UF}}</li>
+                <li>Cidade: {{patient.city == null ? 'Não informado' : patient.city}}</li>
+                <li>Bairro: {{patient.district == null ? 'Não informado' : patient.district}}</li>
+                <li>CEP: {{patient.CEP == null ? 'Não informado' : patient.CEP}} </li>
+                <li>Telefone: {{patient.phone == null ? 'Não informado' : patient.phone}}</li>
+                <li>CPF: {{patient.CPF == null ? 'Não informado' : patient.CPF}}</li>
+                <li>RG: {{patient.RG == null ? 'Não informado' : patient.RG}}</li>
+                <li>SUS: {{patient.SUS == null ? 'Não informado' : patient.SUS}}</li>
+                <li>Convenio: Não implementado ainda</li>
+                <li>Ocupação: {{patient.occupations == null ? 'Não informado' : patient.occupations}} </li>
+                <li>Gênero: {{patient.gender == null ? 'Não informado' : patient.gender}} </li>
             </div>
         </div>
 

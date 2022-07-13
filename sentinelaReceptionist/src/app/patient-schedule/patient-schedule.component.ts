@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Patient } from '../receptionist-panel/patient';
 import { ServiceAuthService } from '../services/patients.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,8 +13,8 @@ export class PatientScheduleComponent implements OnInit {
 
     patient = {} as Patient;
 
-  constructor( private patientService: ServiceAuthService
-    ) {  }
+  constructor( private patientService: ServiceAuthService,
+    private route: Router) {  }
 
   ngOnInit(): void {
     this.showPatient();
@@ -21,16 +22,12 @@ export class PatientScheduleComponent implements OnInit {
   }
 
   showPatient(): void {
-    console.log(sessionStorage.getItem("patientId"));
-    console.log(this.patient.name);
     this.patientService.getPatients(
     sessionStorage.getItem("token"), 
     sessionStorage.getItem("companyId"),
     sessionStorage.getItem("patientId"))
-
     .subscribe(
       data => {
-        sessionStorage
         this.patient = data;
       },
       error => {
@@ -38,4 +35,22 @@ export class PatientScheduleComponent implements OnInit {
       }
     );
   }
+
+  deletePatient(name: any, id: any) {
+    if(confirm("Tem certeza que deseja deletar a paciente " + name + "?")) {
+      this.patientService.deletePatient(sessionStorage.getItem("token"), 
+      sessionStorage.getItem("companyId"),id)
+      .subscribe(
+        data => {
+          this.route.navigateByUrl('/receptionist-panel');
+        },
+        error => {
+          console.log(error);
+        }
+      );
+      this.route.navigateByUrl('/receptionist-panel');
+
+    }
+  }
+
 }

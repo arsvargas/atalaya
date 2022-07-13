@@ -18,6 +18,8 @@ export class ServiceAuthService {
   ) { }
 
   listPatients(token: any, companyId: any): Observable<any> {
+    console.log(token);
+    console.log(companyId);
 
     var reqHeader = new HttpHeaders({ 
       'Content-Type': 'application/json',
@@ -33,6 +35,16 @@ export class ServiceAuthService {
       'Authorization':"Bearer " + token
    });
     return this.http.get<Patient>(`${baseUrl}/companies/${companyId}/patients/${patientId}`, {headers : reqHeader});
+  }
+
+  
+  deletePatient(token: any, companyId: any, patientId: any): Observable<any> {
+
+    var reqHeader = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " + token
+   });
+    return this.http.delete(`${baseUrl}/companies/${companyId}/patients/${patientId}`, {headers : reqHeader});
   }
 
 }
