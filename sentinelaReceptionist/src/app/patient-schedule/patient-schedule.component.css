@@ -33,6 +33,7 @@
 }
 .sect-left .box h3 i{
     cursor: pointer;
+    font-size: 20px;
 }
 .sect-left .box h3 i:hover{
     color: rgb(19,158,188);
