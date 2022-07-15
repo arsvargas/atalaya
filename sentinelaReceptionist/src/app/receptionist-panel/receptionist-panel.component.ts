@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 
 export class ReceptionistPanelComponent implements OnInit {
 
+  filterPatient: string;
+
   listPatients: Patient[];
 
   patient: any;
@@ -21,7 +23,7 @@ export class ReceptionistPanelComponent implements OnInit {
   pag : number = 1;
   counter : number = 10;
  
-  constructor( private patientListService: ServiceAuthService, private route: Router
+  constructor( private patientService: ServiceAuthService, private route: Router
     ) { 
       this.listPatients = [];
 
@@ -39,7 +41,7 @@ export class ReceptionistPanelComponent implements OnInit {
   }
 
   listPatient(): void {
-    this.patientListService.listPatients(sessionStorage.getItem("token"),sessionStorage.getItem("companyId"))
+    this.patientService.listPatients(sessionStorage.getItem("token"),sessionStorage.getItem("companyId"))
     .subscribe(
       data => {
         this.listPatients = data;        
@@ -55,5 +57,20 @@ export class ReceptionistPanelComponent implements OnInit {
     this.route.navigateByUrl('/patient-schedule');
 
   }
+
+  searchPatient(search: any): void {
+    this.patientService.searchPatients(sessionStorage.getItem("token"),
+    sessionStorage.getItem("companyId"), search)
+    .subscribe(
+      data => {
+        this.listPatients = data;        
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+ 
 
 }

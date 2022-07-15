@@ -9,6 +9,8 @@ import { company } from './company';
 })
 export class CompanyListComponent implements OnInit {
 
+  filterCompany: string;
+
   listCompanies:company[];
 
   pag : number = 1;

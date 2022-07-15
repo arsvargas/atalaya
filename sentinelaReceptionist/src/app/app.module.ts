@@ -27,6 +27,7 @@ import { CommonModule } from '@angular/common';
 import { EmergencyRoomComponent } from './emergency-room/emergency-room.component';
 import { ConsultationsInProgressComponent } from './consultations-in-progress/consultations-in-progress.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ConsultationsInProgressComponent
   ],
   imports: [
+    Ng2SearchPipeModule,
     NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
