@@ -5,23 +5,40 @@
   <form [formGroup]="patientFormGroup">
 
     <div class="form-in">
-      <label for="">Nome Completo</label>
+      <label for="">Nome </label>
       <input type="text" formControlName="name" maxlength="40" minlength="5">
     </div>
     <span *ngIf="patientFormGroup.controls['name'].errors">Campo obrigatório!</span>
 
+    <div class="form-in">
+      <label for="">Sobrenome</label>
+      <input type="text" formControlName="surname" maxlength="40" minlength="4">
+    </div>
+    <span *ngIf="patientFormGroup.controls['surname'].errors">Campo obrigatório!</span>
+
 
     <div class="form-in">
       <label for="">Endereço</label>
-      <input type="text" formControlName="adress" minlength="8">
+      <input type="text" formControlName="address" minlength="8">
     </div>
-    <span *ngIf="patientFormGroup.controls['adress'].errors">Campo obrigatório!</span>
+    <span *ngIf="patientFormGroup.controls['address'].errors">Campo obrigatório!</span>
+
+    <div class="form-in">
+      <label for="">Número</label>
+      <input type="text" formControlName="number" >
+    </div>
+    <span *ngIf="patientFormGroup.controls['number'].errors">Campo obrigatório!</span>
+
+    <div class="form-in">
+      <label for="complement">Complemento</label>
+      <input type="text" formControlName="complement" >
+    </div>
 
 
 
     <div class="form-in">
-      <label for="">Estado</label>
-      <select id="estado" name="estado">
+      <label for="UF">Estado</label>
+      <select formControlName="UF" name="UF" id="UF">
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>
@@ -70,57 +87,67 @@
 
     <div class="form-in">
       <label for="bairro">Bairro</label>
-      <input type="text" formControlName="district" minlength="5">
+      <input  type="text" formControlName="district" minlength="5">
     </div>
     <span *ngIf="patientFormGroup.controls['district'].errors">Campo obrigatório!</span>
 
 
     <div class="form-in">
-      <label for="cep">CEP</label>
-      <input type="text" name="cep" [brmasker]="{mask:'00.000.000', len:10}" minlength="10" formControlName="cep" 
+      <label for="CEP">CEP</label>
+      <input  type="text" name="CEP" [brmasker]="{mask:'00.000.000', len:10}" minlength="10" formControlName="CEP" 
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
-    <span *ngIf="patientFormGroup.controls['cep'].errors">Campo obrigatório!</span>
+    <span *ngIf="patientFormGroup.controls['CEP'].errors">Campo obrigatório!</span>
 
 
     <div class="form-in">
-      <label for="telefone">Telefone</label>
-      <input type="tel" name="phone" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}"
-        formControlName="telephone">
+      <label for="phone">Telefone</label>
+      <input  type="tel" name="phone" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}"
+        formControlName="phone">
     </div>
-    <span *ngIf="patientFormGroup.controls['telephone'].errors">Campo obrigatório!</span>
+    <span *ngIf="patientFormGroup.controls['phone'].errors">Campo obrigatório!</span>
 
 
     <div class="form-in">
-      <label for="cpf">CPF</label>
-      <input type="text" name="cpf" formControlName="cpf" [brmasker]="{mask:'000.000.000-00', len:14}" minlength="14" 
+      <label for="CPF">CPF</label>
+      <input  type="text" name="CPF" formControlName="CPF" [brmasker]="{mask:'000.000.000-00', len:14}" minlength="14" 
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
-    <span *ngIf="patientFormGroup.controls['cpf'].errors">Campo obrigatório!</span>
+    <span *ngIf="patientFormGroup.controls['CPF'].errors">Campo obrigatório!</span>
 
 
     <div class="form-in">
-      <label for="rg">RG</label>
-      <input type="text" name="rg" maxlength="10" formControlName="rg" minlength="10"
+      <label for="RG">RG</label>
+      <input  type="text" name="RG" maxlength="10" formControlName="RG" minlength="10"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
-    <span *ngIf="patientFormGroup.controls['rg'].errors">Campo obrigatório!</span>
+    <span *ngIf="patientFormGroup.controls['RG'].errors">Campo obrigatório!</span>
 
 
     <div class="form-in">
-      <label for="sus">Num. cart. SUS</label>
-      <input type="text" maxlength="15" [brmasker]="{mask:'000000000000000', len:15}"
+      <label for="SUS">Num. cart. SUS</label>
+      <input formControlName="SUS" name="SUS"  type="text" maxlength="15" [brmasker]="{mask:'000000000000000', len:15}"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
     </div>
 
     <div class="form-in">
-      <label for="nome">Convênio</label>
-      <input type="text">
+      <label for="health_insurance_name">Convênio</label>
+      <input formControlName="health_insurance_name" name="health_insurance_name" type="text">
     </div>
 
     <div class="form-in">
-      <label for="estado_civil">Estado civil</label>
-      <select name="estado_civil" id="estado_civil">
+      <label for="health_insurance_number">Número do Convênio</label>
+      <input formControlName="health_insurance_number" name="health_insurance_number" type="text">
+    </div>
+
+    <div class="form-in">
+      <label for="mother_name">Nome da mãe</label>
+      <input formControlName="mother_name" name="mother_name" type="text">
+    </div>
+
+    <div class="form-in">
+      <label for="marital_status">Estado civil</label>
+      <select formControlName="marital_status" name="marital_status" id="marital_status">
         <option value=""></option>
         <option value="Solteiro">Solteiro</option>
         <option value="Casado">Casado</option>
@@ -128,6 +155,15 @@
         <option value="Divorciado">Divorciado</option>
         <option value="Viúvo">Viúvo</option>
         <option value="Amasiado">Amasiado</option>
+      </select>
+    </div>
+
+    <div class="form-in">
+      <label for="gender">Gênero</label>
+      <select formControlName="gender" name="gender" id="gender">
+        <option value="male">Masculino</option>
+        <option value="female">Feminino</option>
+        <option value="undefined">Não informar</option>
       </select>
     </div>
 
@@ -140,9 +176,14 @@
       E-mail inválido
   </span>
 
+  <div class="form-in">
+    <label for="password">Email</label>
+    <input type="password" formControlName="password">
+  </div>
+
 
   </form>
-  <button type="submit" (click)="post()">Cadastrar</button>
+  <button type="submit" (click)="createPatient()">Cadastrar</button>
 
 </div>
 

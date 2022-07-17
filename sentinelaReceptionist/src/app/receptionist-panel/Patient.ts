@@ -6,7 +6,7 @@ export interface Patient {
     email:string;//
     phone:string;//
     gender:string;
-    marital_status:string;    
+    marital_status:string; //   
     CEP:string;//
     address:string;//
     number:string;//
@@ -19,6 +19,9 @@ export interface Patient {
     SUS:string;    //
     CRM:string;//Verificar!
     occupations:string;
+    health_insurance_name:string;
+    health_insurance_number:string;
+    password:string;
     
 
 }

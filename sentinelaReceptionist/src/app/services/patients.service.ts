@@ -56,5 +56,14 @@ export class ServiceAuthService {
   
   }
 
+  createPatients(token: any, companyId: any, objectPatient: any): Observable<any> {
+    var reqHeader = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " + token
+   });
+    return this.http.post<Patient>(`${baseUrl}/companies/${companyId}/patients`, objectPatient, {headers : reqHeader});
+  
+  }
+
 
 }

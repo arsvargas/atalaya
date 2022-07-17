@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { ServiceAuthService } from '../services/patients.service';
+import { Patient } from '../receptionist-panel/patient';
 
 @Component({
   selector: 'app-patient-register',
@@ -7,32 +9,44 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./patient-register.component.css']
 })
 
-export class PatientRegisterComponent implements OnInit { 
+export class PatientRegisterComponent implements OnInit {
 
   patientFormGroup: FormGroup;
- 
-  constructor(private formBuilder: FormBuilder) { 
-     
-     this.patientFormGroup = this.formBuilder.group({  
-    
+  patient = {} as Patient;
+
+  constructor(private formBuilder: FormBuilder, private patientService: ServiceAuthService) {
+
+    this.patientFormGroup = this.formBuilder.group({
       name: ['', Validators.required],
+      surname: ['', Validators.required],
       email: ['', [
         Validators.required,
         Validators.email
       ]],
-      cpf: ['', Validators.required],
-      rg: ['', Validators.required],
-      adress: ['', Validators.required],
+      CPF: ['', Validators.required],
+      RG: ['', Validators.required],
+      address: ['', Validators.required],
+      number: ['', Validators.required],
       city: ['', Validators.required],
       date: ['', Validators.required],
       district: ['', Validators.required],
-      cep: ['', Validators.required],
-      telephone: ['', Validators.required]
+      CEP: ['', Validators.required],
+      phone: ['', Validators.required],
+      SUS:[],
+      UF:[],
+      marital_status:[],
+      health_insurance_name:[],
+      health_insurance_number:[],
+      gender:[],
+      mother_name:[],
+      complement:[],
+      password:[]
+
 
     });
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
   }
 
   post() {
@@ -41,6 +55,52 @@ export class PatientRegisterComponent implements OnInit {
       return;
     }
     alert("Formulário válido!");
+  }
+
+  createPatient(): void {
+
+    this.setPatient();
+
+    this.patientService.createPatients(sessionStorage.getItem("token"),
+      sessionStorage.getItem("companyId"), this.patient)
+      
+      .subscribe(
+        data => {
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
+
+  setPatient() {
+    this.patient.name = this.patientFormGroup.value.name;
+    this.patient.surname = this.patientFormGroup.value.surname;
+    this.patient.address = this.patientFormGroup.value.address;
+    this.patient.number = this.patientFormGroup.value.number;
+    this.patient.complement = this.patientFormGroup.value.complement;
+    this.patient.UF = this.patientFormGroup.value.UF;
+    this.patient.city = this.patientFormGroup.value.city;
+    this.patient.district = this.patientFormGroup.value.district;
+    this.patient.CEP = this.patientFormGroup.value.CEP;
+    this.patient.phone = this.patientFormGroup.value.phone;
+    this.patient.CPF = this.patientFormGroup.value.CPF;
+    this.patient.RG = this.patientFormGroup.value.RG;
+    this.patient.SUS = this.patientFormGroup.value.SUS;
+    this.patient.health_insurance_name = this.patientFormGroup.value.health_insurance_name;
+    this.patient.health_insurance_number = this.patientFormGroup.value.health_insurance_number;
+    this.patient.marital_status = this.patientFormGroup.value.marital_status;
+    this.patient.email = this.patientFormGroup.value.email; 
+    this.patient.mother_name = this.patientFormGroup.value.mother_name;
+    this.patient.gender = this.patientFormGroup.value.gender;
+    this.patient.password = this.patientFormGroup.value.password;   
+   
+   
+  
+
+    console.log(this.patient);
+
   }
 
 }
