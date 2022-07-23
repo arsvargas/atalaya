@@ -18,11 +18,10 @@
 
             <div class="container-button" *ngIf="cadastrarPaciente; then thenBlock1 else elseBlock1"></div>
             <ng-template #thenBlock1>
-                <li id="on"><a type="button" routerLink="/patient-register"
-                        (click)="buttonOn('cadastrarPaciente')">Cadastrar Paciente</a></li>
+                <li id="on"><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar Paciente</a></li>
             </ng-template>
             <ng-template #elseBlock1>
-                <li><a type="button" routerLink="/patient-register" (click)="buttonOn('cadastrarPaciente')">Cadastrar
+                <li><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar
                         Paciente</a></li>
             </ng-template>
 

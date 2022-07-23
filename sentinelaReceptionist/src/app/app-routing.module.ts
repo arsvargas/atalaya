@@ -19,6 +19,7 @@ import { RecepcionistHeaderComponent } from './recepcionist-header/recepcionist-
 import { AuthGuardService } from './services/auth-guard.service';
 import { EmergencyRoomComponent } from './emergency-room/emergency-room.component';
 import { ConsultationsInProgressComponent } from './consultations-in-progress/consultations-in-progress.component';
+import { PatientUpdateComponent } from './patient-update/patient-update.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'recepcionist-header', component: RecepcionistHeaderComponent, canActivate:[AuthGuardService]},
   { path: 'emergency-room', component: EmergencyRoomComponent, canActivate:[AuthGuardService]},
   { path: 'consultations-in-progress', component: ConsultationsInProgressComponent, canActivate:[AuthGuardService]},
+  { path: 'patient-update', component: PatientUpdateComponent, canActivate:[AuthGuardService]},
 
   
   { path: '', redirectTo: 'home', pathMatch: 'full' }

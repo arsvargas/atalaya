@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ServiceAuthService } from '../services/patients.service';
 import { Patient } from '../receptionist-panel/patient';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient-register',
@@ -14,7 +15,9 @@ export class PatientRegisterComponent implements OnInit {
   patientFormGroup: FormGroup;
   patient = {} as Patient;
 
-  constructor(private formBuilder: FormBuilder, private patientService: ServiceAuthService) {
+  constructor(private formBuilder: FormBuilder, 
+    private patientService: ServiceAuthService,
+    private route: Router) {
 
     this.patientFormGroup = this.formBuilder.group({
       name: ['', Validators.required],
@@ -41,13 +44,12 @@ export class PatientRegisterComponent implements OnInit {
       mother_name:[],
       complement:[],
       password:[]
-
-
     });
   }
 
   ngOnInit(): void {
   }
+
 
   post() {
     if (!this.patientFormGroup.valid) {
@@ -57,23 +59,22 @@ export class PatientRegisterComponent implements OnInit {
     alert("Formulário válido!");
   }
 
-  createPatient(): void {
-
+  createPatient(): void {  
     this.setPatient();
-
     this.patientService.createPatients(sessionStorage.getItem("token"),
       sessionStorage.getItem("companyId"), this.patient)
       
       .subscribe(
         data => {
           console.log(data);
+          this.route.navigateByUrl('/receptionist-panel');
         },
         error => {
           console.log(error);
         }
       );
   }
-
+  
   setPatient() {
     this.patient.name = this.patientFormGroup.value.name;
     this.patient.surname = this.patientFormGroup.value.surname;
@@ -94,13 +95,7 @@ export class PatientRegisterComponent implements OnInit {
     this.patient.email = this.patientFormGroup.value.email; 
     this.patient.mother_name = this.patientFormGroup.value.mother_name;
     this.patient.gender = this.patientFormGroup.value.gender;
-    this.patient.password = this.patientFormGroup.value.password;   
-   
-   
-  
-
-    console.log(this.patient);
-
+    this.patient.password = "123456";
   }
 
 }

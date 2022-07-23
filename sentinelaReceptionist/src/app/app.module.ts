@@ -28,6 +28,7 @@ import { EmergencyRoomComponent } from './emergency-room/emergency-room.componen
 import { ConsultationsInProgressComponent } from './consultations-in-progress/consultations-in-progress.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PatientUpdateComponent } from './patient-update/patient-update.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CompanyListComponent,
     RecepcionistHeaderComponent,
     EmergencyRoomComponent,
-    ConsultationsInProgressComponent
+    ConsultationsInProgressComponent,
+    PatientUpdateComponent
   ],
   imports: [
     Ng2SearchPipeModule,

@@ -3,7 +3,6 @@ import { Patient } from '../receptionist-panel/patient';
 import { ServiceAuthService } from '../services/patients.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-patient-schedule',
   templateUrl: './patient-schedule.component.html',
@@ -14,11 +13,10 @@ export class PatientScheduleComponent implements OnInit {
     patient = {} as Patient;
 
   constructor( private patientService: ServiceAuthService,
-    private route: Router) {  }
+    private route: Router) { }
 
   ngOnInit(): void {
     this.showPatient();
-    
   }
 
   showPatient(): void {
@@ -51,6 +49,9 @@ export class PatientScheduleComponent implements OnInit {
       this.route.navigateByUrl('/receptionist-panel');
 
     }
+  }
+  updatePatient() {
+      this.route.navigateByUrl('/patient-update');
   }
 
 }

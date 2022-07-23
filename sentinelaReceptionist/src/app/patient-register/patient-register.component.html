@@ -25,13 +25,13 @@
 
     <div class="form-in">
       <label for="">Número</label>
-      <input type="text" formControlName="number" >
+      <input type="text" formControlName="number">
     </div>
     <span *ngIf="patientFormGroup.controls['number'].errors">Campo obrigatório!</span>
 
     <div class="form-in">
       <label for="complement">Complemento</label>
-      <input type="text" formControlName="complement" >
+      <input type="text" formControlName="complement">
     </div>
 
 
@@ -82,7 +82,7 @@
       <label for="">Data de nascimento</label>
       <input type="date" formControlName="date">
     </div>
-    <span *ngIf="patientFormGroup.controls['date'].errors">Campo obrigatório!</span>
+    <span *ngIf="patientFormGroup.controls['date'].errors">Campo obrigatório! </span>
 
 
     <div class="form-in">
@@ -176,14 +176,8 @@
       E-mail inválido
   </span>
 
-  <div class="form-in">
-    <label for="password">Email</label>
-    <input type="password" formControlName="password">
-  </div>
-
-
   </form>
-  <button type="submit" (click)="createPatient()">Cadastrar</button>
+  <button type="submit" (click)="createPatient()">Criar</button>
 
 </div>
 

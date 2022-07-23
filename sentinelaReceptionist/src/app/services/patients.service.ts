@@ -65,5 +65,13 @@ export class ServiceAuthService {
   
   }
 
+  updatePatient(token: any, companyId: any, patientId: any, objectPatient: any): Observable<any> {
+    var reqHeader = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " + token
+   });
+    return this.http.patch<Patient>(`${baseUrl}/companies/${companyId}/patients/${patientId}`, objectPatient, {headers : reqHeader});
+  }
+
 
 }
