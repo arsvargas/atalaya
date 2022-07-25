@@ -13,9 +13,15 @@ export class HomeComponent implements OnInit {
   password: any;
   roles: any = {};
 
-  constructor(private authService: ServiceAuthService, private route: Router) { }
+  constructor(private authService: ServiceAuthService, private route: Router) { 
+  }
 
   ngOnInit(): void {
+
+  }
+
+ public getRoles() : any {
+    return this.roles;
   }
 
   login(): void {
@@ -29,9 +35,11 @@ export class HomeComponent implements OnInit {
         response => {
           if (this.checkRecepcionistRole(response)) {
             sessionStorage.setItem("logged", response.success);
+            sessionStorage.setItem("email", this.email);
+            sessionStorage.setItem("pass", this.password);
             sessionStorage.setItem("name", response.user.name);
             sessionStorage.setItem("token", response.token);
-            this.route.navigateByUrl('/company-list');
+            this.route.navigateByUrl('/roles');
           } else {
             alert('Seu usuário não está cadastrado como recepcionista, por favor entre em contato com a administração.')
           }

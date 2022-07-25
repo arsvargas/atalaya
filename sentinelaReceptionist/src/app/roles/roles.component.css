@@ -1,0 +1,35 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(10,80,107);
+    border-radius: 20px;
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+button{
+    padding: 0.6rem;
+    color: #fff;
+    background-color: rgb(10,80,107);
+    border: 1px solid rgb(10,80,107);
+    border-radius: 15px; 
+    margin-bottom: 15px;
+    margin-top: 20px; 
+}
+button:hover{
+    border: 1px solid rgb(19,158,188);
+    background-color: rgb(19,158,188);
+}
+
+@media (max-width: 600px){
+    .center{
+        width: 350px;
+    }
+    h3{
+        font-size: 20px;
+    }
+}

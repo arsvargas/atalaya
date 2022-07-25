@@ -1,0 +1,7 @@
+<div *ngFor="let role of roles">
+    
+        <span *ngIf="role.name != 'user' && role.name != 'patient'">
+            <div class="center">
+            <button type="submit" (click)="goCompany()">{{role.name}}</button>
+        </div>
+        </span>
