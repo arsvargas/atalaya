@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
             sessionStorage.setItem("token", response.token);
             this.route.navigateByUrl('/roles');
           } else {
-            alert('Seu usuário não está cadastrado como recepcionista, por favor entre em contato com a administração.')
+            alert('Seu usuário não tem autorização para este acesso, por favor entre em contato com a administração.')
           }
         },
         error => {
