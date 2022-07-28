@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
     this.authService.login(loginUser)
       .subscribe(
         response => {
-          if (this.checkRecepcionistRole(response)) {
+          if (this.checkRole(response)) {
             sessionStorage.setItem("logged", response.success);
             sessionStorage.setItem("email", this.email);
             sessionStorage.setItem("pass", this.password);
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
       );
   }
 
-  private checkRecepcionistRole(response: any): boolean {
+  private checkRole(response: any): boolean {
     this.roles = response.user.roles;
     let isRole: boolean;
     isRole = false;

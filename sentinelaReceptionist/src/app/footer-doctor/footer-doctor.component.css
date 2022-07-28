@@ -1,0 +1,25 @@
+.footer{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(10,80,107);
+    bottom: 0;
+}
+
+.footer p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+h5{
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+@media (max-width: 600px) {
+    
+}

@@ -1,0 +1,49 @@
+<app-header-doctor></app-header-doctor>
+
+<div class="row">
+    <a><i (click)="backMonth()" class="fa fa-angle-left" aria-hidden="true"></i></a>
+    <div class="mainbody">
+        <span>Nome do médico</span>
+        <span>{{monthName}} de {{year}}</span>
+
+        <div class="container">
+            <div *ngFor="let day of counter;">
+                <a routerLink="/about-doctor-day">
+                    <div *ngIf="checkToday(day, month, year); then thenBlock else elseBlock"></div>
+                    <ng-template #thenBlock>
+                        <div class="card-container">
+                            <div class="front-today">
+                                <h2>{{day}}</h2>
+                                <h5>{{getWeekDay(day)}}</h5>
+                            </div>
+                            <div class="back">
+                                <p>14:00 João Silva</p>
+                                <p>14:30 João Silva2</p>
+                                <p>15:00 João Silva3</p>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template #elseBlock>
+                        <div class="card-container">
+                            <div class="front">
+                                <h2>{{day}}</h2>
+                                <h5>{{getWeekDay(day)}}</h5>
+                            </div>
+                            <div class="back">
+                                <p>14:00 João Silva</p>
+                                <p>14:30 João Silva2</p>
+                                <p>15:00 João Silva3</p>
+                            </div>
+                        </div>
+                    </ng-template>
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <a><i (click)="nextMonth()" class="fa fa-angle-right" aria-hidden="true"></i></a>
+</div>
+
+<app-footer-doctor></app-footer-doctor>

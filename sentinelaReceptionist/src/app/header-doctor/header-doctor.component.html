@@ -1,0 +1,44 @@
+<body>
+
+    <nav>
+        <ul>
+            <div class="logo-empresa"><img src="{{logo}}"></div>
+
+            
+            <div class="container-button" *ngIf="pesquisarPaciente; then thenBlock4 else elseBlock4"></div>
+            <ng-template #thenBlock4>
+                <li id="on"><a type="button" routerLink="/doctor-panel"
+                        (click)="buttonOn('pesquisarPaciente')">Pesquisar Paciente</a></li>
+            </ng-template>
+            <ng-template #elseBlock4>
+                <li><a type="button" routerLink="/doctor-panel" (click)="buttonOn('pesquisarPaciente')">Pesquisar
+                        Paciente</a></li>
+            </ng-template>
+
+
+            <div class="container-button" *ngIf="cadastrarAgenda; then thenBlock2 else elseBlock2"></div>
+            <ng-template #thenBlock2>
+                <li id="on"><a type="button" routerLink="/doctor-about-doctor"
+                        (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
+            </ng-template>
+            <ng-template #elseBlock2>
+                <li><a type="button" routerLink="/doctor-about-doctor" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
+            </ng-template>
+
+            <div class="container-button" *ngIf="alertaChat; then thenBlock3 else elseBlock3"></div>
+            <ng-template #thenBlock3>
+                <li id="on"><a type="button" routerLink="/chat-alert" (click)="buttonOn('alertaChat')">Alertas</a></li>
+            </ng-template>
+            <ng-template #elseBlock3>
+                <li><a type="button" routerLink="/chat-alert" (click)="buttonOn('alertaChat')">Alertas</a></li>
+            </ng-template>
+
+            <button (click)="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>
+            </button>
+
+
+            <!--<input id="search" type="search">
+            <button routerLink="/about-patient"><i class="fa fa-search" aria-hidden="true"></i></button></li>-->
+        </ul>
+    </nav>
+</body>

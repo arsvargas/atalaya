@@ -39,7 +39,14 @@ export class RolesComponent implements OnInit {
       );
   }
 
-  goCompany() : void {
-    this.route.navigateByUrl('/company-list');
+  goCompany(role : any) : void {
+    sessionStorage.setItem("role", role);
+
+    if(role == 'doctor') {
+      this.route.navigateByUrl('/doctor-panel');
+    }
+    else if(role == 'receptionist') {
+      this.route.navigateByUrl('/company-list');
+    }
   }
 }

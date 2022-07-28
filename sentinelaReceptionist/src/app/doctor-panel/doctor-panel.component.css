@@ -1,0 +1,139 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.center{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+}
+
+.search-field{
+    width: 100%;
+    color: rgb(10,80,107);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 3;
+    padding: 15px;
+    margin: 20px;
+}
+
+
+.search-field input{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid grey;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.6rem;
+}
+
+.search-field button{
+    border: 1px solid rgb(10,80,107);
+    background-color: rgb(10,80,107);
+    border-radius: 10px;
+    width: 40px;
+}
+
+.search-field button i{
+    color: #fff;
+}
+
+.search-field button:hover{
+    background-color: rgb(19,158,188);
+    border: 1px solid rgb(19,158,188);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options button{
+    border: 1px solid rgb(10,80,107);
+    background-color: rgb(10,80,107);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.options button:hover{
+    background-color: rgb(19,158,188);
+    border: 1px solid rgb(19,158,188);
+}
+
+.center ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 5px;
+}
+
+.center ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    margin-left: -35px;
+    box-shadow: grey 0px 2px 3px 0px;
+    text-align: center;
+    color: rgb(10, 80, 107);
+}
+
+.center ul li:hover{
+    background-color: rgb(19, 158, 188);
+    color: #fff;
+}
+
+.pagination-top{
+    margin-top: 50px;
+    margin-bottom: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background-color: rgb(19, 158, 188);
+    border-radius: 5px;
+  }
+
+@media (max-width: 710px){
+    .center:first-child{
+        margin-top: 150px;
+    }
+    .center{
+        width: 350px;
+      
+    }
+    .search-field{
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-field input{
+        width: 100%;
+        margin: 10px;
+    }
+    .search-field button{
+        width: 100%;
+        margin: 10px;
+    }
+}

@@ -6,6 +6,7 @@
 
             <li><a type="button" routerLink="/company-list">Lista de Empresas</a></li>
 
+
             <div class="container-button" *ngIf="pesquisarPaciente; then thenBlock4 else elseBlock4"></div>
             <ng-template #thenBlock4>
                 <li id="on"><a type="button" routerLink="/receptionist-panel"
@@ -16,6 +17,7 @@
                         Paciente</a></li>
             </ng-template>
 
+            <span *ngIf="role == 'receptionist'">
             <div class="container-button" *ngIf="cadastrarPaciente; then thenBlock1 else elseBlock1"></div>
             <ng-template #thenBlock1>
                 <li id="on"><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar Paciente</a></li>
@@ -23,8 +25,9 @@
             <ng-template #elseBlock1>
                 <li><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar
                         Paciente</a></li>
-            </ng-template>
+            </ng-template></span>
 
+            <span *ngIf="role == 'receptionist'">
             <div class="container-button" *ngIf="cadastrarAgenda; then thenBlock2 else elseBlock2"></div>
             <ng-template #thenBlock2>
                 <li id="on"><a type="button" routerLink="/schedule-register"
@@ -32,6 +35,16 @@
             </ng-template>
             <ng-template #elseBlock2>
                 <li><a type="button" routerLink="/schedule-register" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
+            </ng-template></span>
+
+
+            <div class="container-button" *ngIf="cadastrarAgenda; then thenBlock4 else elseBlock4"></div>
+            <ng-template #thenBlock4>
+                <li id="on"><a type="button" routerLink="/about-doctor"
+                        (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
+            </ng-template>
+            <ng-template #elseBlock4>
+                <li><a type="button" routerLink="/about-doctor" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
             </ng-template>
 
             <div class="container-button" *ngIf="alertaChat; then thenBlock3 else elseBlock3"></div>

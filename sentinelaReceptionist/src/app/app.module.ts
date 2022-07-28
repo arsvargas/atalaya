@@ -30,6 +30,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PatientUpdateComponent } from './patient-update/patient-update.component';
 import { RolesComponent } from './roles/roles.component';
+import { HeaderMedicoComponent } from './header-doctor/header-doctor.component';
+import { DoctorPanelComponent } from './doctor-panel/doctor-panel.component';
+import { FooterDoctorComponent } from './footer-doctor/footer-doctor.component';
+import { DoctorAboutDoctorComponent } from './doctor-about-doctor/doctor-about-doctor.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,11 @@ import { RolesComponent } from './roles/roles.component';
     EmergencyRoomComponent,
     ConsultationsInProgressComponent,
     PatientUpdateComponent,
-    RolesComponent
+    RolesComponent,
+    HeaderMedicoComponent,
+    DoctorPanelComponent,
+    FooterDoctorComponent,
+    DoctorAboutDoctorComponent
   ],
   imports: [
     Ng2SearchPipeModule,

@@ -1,0 +1,137 @@
+i{
+    color: rgb(10,80,107);
+    font-size: 70px;
+    margin-top: 300px;
+}
+
+i:hover{
+    color: rgb(19,158,188);
+    font-weight: 700;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.mainbody{
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mainbody span{
+    color: rgb(10,80,107);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.container{
+    margin-top: 20px;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a{
+    cursor: pointer;
+}
+.card-container, .front, .back, .front-today{
+	width: 110px;
+	height: 90px;
+}
+.card-container {
+	margin: 5px;
+}
+
+.card-container .front h2{
+    margin-top: 15px;
+}
+
+.card-container .front h5{
+    margin-top: 0px;
+    font-weight: 200;
+    font-size: 15px;
+}
+.front, .front-today, .back {
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
+	color: #fff;      
+	text-align: center;
+}
+
+.card-container .back{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 95%;
+}
+.card-container .back p{
+    font-size: 10px;
+    padding: 3px;
+    margin: 0;
+}
+
+.front {
+	background-image: linear-gradient(to right bottom, rgb(10,80,107), rgb(31,123,160));
+}
+
+.front-today {
+	background-image: linear-gradient(to right bottom, rgb(167, 212, 230), rgb(31,123,160));
+}
+
+.back {
+	background-image: linear-gradient(to right bottom, rgb(82,147,175), rgb(19,158,188));
+}
+
+.card-container {
+	position: relative;
+}
+
+.front, .front-today, .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	overflow: hidden;
+	transition: transform .8s ease;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.card-container:hover .front {
+	transform: rotateY(-180deg);
+}
+
+.card-container:hover .front-today{
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover .back {
+	transform: rotateY(0deg);
+}
+
+.card-container {
+	perspective: 75rem;
+}
+
+@media (max-width: 710px){
+    .container{
+        width: 300px;
+    }
+    span{
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,25 @@
+<app-header-doctor></app-header-doctor>
+<div class="main">
+    <div class="center">
+        <div class="search-field">
+            <input [(ngModel)]="filterPatient" id="search" type="search" placeholder="Pesquisar Paciente">
+            <button (click)="searchPatient(filterPatient)"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    
+        
+    </div>
+    
+    <div class="pagination-top">
+        <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
+        </div>
+    <div class="center">
+        <span>Resultado da Pesquisa</span>
+        <ul *ngFor="let patient of listPatients | filter: filterPatient | paginate: { itemsPerPage: counter, currentPage: pag }  " >
+            <li (click)="selectPatient(patient.id)" >{{patient.name}}</li>        
+          </ul>
+    </div>
+    <div class="pagination-bottom">
+        <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
+      </div>
+    </div>
+    <app-footer-doctor></app-footer-doctor>

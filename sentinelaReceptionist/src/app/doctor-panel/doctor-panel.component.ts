@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceAuthService } from '../services/patients.service';
-import { Patient } from './patient';
+import { Patient } from './Patient';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-receptionist-panel',
-  templateUrl: './receptionist-panel.component.html',
-  styleUrls: ['./receptionist-panel.component.css']
+  selector: 'app-doctor-panel',
+  templateUrl: './doctor-panel.component.html',
+  styleUrls: ['./doctor-panel.component.css']
 })
-
-
-
-export class ReceptionistPanelComponent implements OnInit {
+export class DoctorPanelComponent implements OnInit {
 
   filterPatient: string;
 
@@ -22,10 +18,9 @@ export class ReceptionistPanelComponent implements OnInit {
   
   pag : number = 1;
   counter : number = 10;
- 
-  constructor( private patientService: ServiceAuthService, private route: Router) { 
-      this.listPatients = [];
 
+  constructor(private patientService: ServiceAuthService, private route: Router) { 
+    this.listPatients = [];
   }
 
   ngOnInit(): void {
@@ -70,6 +65,5 @@ export class ReceptionistPanelComponent implements OnInit {
     );
   }
 
- 
 
 }
