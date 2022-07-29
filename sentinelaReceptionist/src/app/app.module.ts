@@ -34,6 +34,8 @@ import { HeaderMedicoComponent } from './header-doctor/header-doctor.component';
 import { DoctorPanelComponent } from './doctor-panel/doctor-panel.component';
 import { FooterDoctorComponent } from './footer-doctor/footer-doctor.component';
 import { DoctorAboutDoctorComponent } from './doctor-about-doctor/doctor-about-doctor.component';
+import { DoctorCompanyListComponent } from './doctor-company-list/doctor-company-list.component';
+import { DoctorAboutDoctorDayComponent } from './doctor-about-doctor-day/doctor-about-doctor-day.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { DoctorAboutDoctorComponent } from './doctor-about-doctor/doctor-about-d
     HeaderMedicoComponent,
     DoctorPanelComponent,
     FooterDoctorComponent,
-    DoctorAboutDoctorComponent
+    DoctorAboutDoctorComponent,
+    DoctorCompanyListComponent,
+    DoctorAboutDoctorDayComponent
   ],
   imports: [
     Ng2SearchPipeModule,

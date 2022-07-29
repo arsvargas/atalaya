@@ -43,7 +43,7 @@ export class RolesComponent implements OnInit {
     sessionStorage.setItem("role", role);
 
     if(role == 'doctor') {
-      this.route.navigateByUrl('/doctor-panel');
+      this.route.navigateByUrl('/doctor-company-list');
     }
     else if(role == 'receptionist') {
       this.route.navigateByUrl('/company-list');

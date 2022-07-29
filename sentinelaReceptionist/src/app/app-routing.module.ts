@@ -25,6 +25,8 @@ import { HeaderMedicoComponent } from './header-doctor/header-doctor.component';
 import { DoctorPanelComponent } from './doctor-panel/doctor-panel.component';
 import { FooterDoctorComponent } from './footer-doctor/footer-doctor.component';
 import { DoctorAboutDoctorComponent } from './doctor-about-doctor/doctor-about-doctor.component';
+import { DoctorCompanyListComponent } from './doctor-company-list/doctor-company-list.component';
+import { DoctorAboutDoctorDayComponent } from './doctor-about-doctor-day/doctor-about-doctor-day.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -51,6 +53,10 @@ const routes: Routes = [
   { path: 'doctor-panel', component: DoctorPanelComponent, canActivate:[AuthGuardService]},
   { path: 'footer-doctor', component: FooterDoctorComponent, canActivate:[AuthGuardService]},
   { path: 'doctor-about-doctor', component: DoctorAboutDoctorComponent, canActivate:[AuthGuardService]},
+  { path: 'doctor-company-list', component: DoctorCompanyListComponent, canActivate:[AuthGuardService]},
+  { path: 'doctor-about-doctor-day', component: DoctorAboutDoctorDayComponent, canActivate:[AuthGuardService]},
+
+
 
 
 
