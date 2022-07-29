@@ -27,10 +27,10 @@
 
             <div class="container-button" *ngIf="alertaChat; then thenBlock3 else elseBlock3"></div>
             <ng-template #thenBlock3>
-                <li id="on"><a type="button" routerLink="/chat-alert" (click)="buttonOn('alertaChat')">Alertas</a></li>
+                <li id="on"><a type="button" routerLink="/doctor-chat-alert" (click)="buttonOn('alertaChat')">Alertas</a></li>
             </ng-template>
             <ng-template #elseBlock3>
-                <li><a type="button" routerLink="/chat-alert" (click)="buttonOn('alertaChat')">Alertas</a></li>
+                <li><a type="button" routerLink="/doctor-chat-alert" (click)="buttonOn('alertaChat')">Alertas</a></li>
             </ng-template>
 
             <button (click)="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>

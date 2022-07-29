@@ -27,6 +27,8 @@ import { FooterDoctorComponent } from './footer-doctor/footer-doctor.component';
 import { DoctorAboutDoctorComponent } from './doctor-about-doctor/doctor-about-doctor.component';
 import { DoctorCompanyListComponent } from './doctor-company-list/doctor-company-list.component';
 import { DoctorAboutDoctorDayComponent } from './doctor-about-doctor-day/doctor-about-doctor-day.component';
+import { DoctorChatAlertComponent } from './doctor-chat-alert/doctor-chat-alert.component';
+import { DoctorConsultationsInProgressComponent } from './doctor-consultations-in-progress/doctor-consultations-in-progress.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -55,6 +57,10 @@ const routes: Routes = [
   { path: 'doctor-about-doctor', component: DoctorAboutDoctorComponent, canActivate:[AuthGuardService]},
   { path: 'doctor-company-list', component: DoctorCompanyListComponent, canActivate:[AuthGuardService]},
   { path: 'doctor-about-doctor-day', component: DoctorAboutDoctorDayComponent, canActivate:[AuthGuardService]},
+  { path: 'doctor-chat-alert', component: DoctorChatAlertComponent, canActivate:[AuthGuardService]},
+  { path: 'doctor-consultations-in-progress', component: DoctorConsultationsInProgressComponent, canActivate:[AuthGuardService]},
+
+
 
 
 

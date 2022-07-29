@@ -1,137 +1,68 @@
-i{
-    color: rgb(10,80,107);
-    font-size: 70px;
-    margin-top: 300px;
-}
-
-i:hover{
-    color: rgb(19,158,188);
-    font-weight: 700;
-}
-
-.row{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-}
-
 .mainbody{
 	min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
 }
 
-.mainbody span{
-    color: rgb(10,80,107);
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.container{
-    margin-top: 20px;
-    width: 1000px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-a{
-    cursor: pointer;
-}
-.card-container, .front, .back, .front-today{
-	width: 110px;
-	height: 90px;
-}
-.card-container {
-	margin: 5px;
-}
-
-.card-container .front h2{
-    margin-top: 15px;
-}
-
-.card-container .front h5{
-    margin-top: 0px;
-    font-weight: 200;
-    font-size: 15px;
-}
-.front, .front-today, .back {
-	box-sizing: border-box;
-	border-radius: 10px;
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
-	color: #fff;      
-	text-align: center;
-}
-
-.card-container .back{
+.center {border: 15px solid rgb(102, 255, 0);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 5px;
-    padding-top: 5px;
-    width: 95%;
-}
-.card-container .back p{
-    font-size: 10px;
-    padding: 3px;
-    margin: 0;
-}
-
-.front {
-	background-image: linear-gradient(to right bottom, rgb(10,80,107), rgb(31,123,160));
+    align-items:center;
+    border: 1px solid rgb(10,80,107);
+    border-radius: 20px;
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
 }
 
-.front-today {
-	background-image: linear-gradient(to right bottom, rgb(167, 212, 230), rgb(31,123,160));
+.time {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    line-height: 30px;
 }
 
-.back {
-	background-image: linear-gradient(to right bottom, rgb(82,147,175), rgb(19,158,188));
+.time label{
+    display: flex;
+    align-self: flex-start;
+    margin: auto 0;
+    color: rgb(10,80,107);
 }
 
-.card-container {
-	position: relative;
+.time input{
+
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 400px;
 }
 
-.front, .front-today, .back {
-	position: absolute;
-	top: 0;
-	left: 0;
-	backface-visibility: hidden;
-	overflow: hidden;
-	transition: transform .8s ease;
-}
-
-.back {
-	transform: rotateY(180deg);
-}
-
-.card-container:hover .front {
-	transform: rotateY(-180deg);
-}
-
-.card-container:hover .front-today{
-    transform: rotateY(-180deg);
-}
-
-.card-container:hover .back {
-	transform: rotateY(0deg);
-}
-
-.card-container {
-	perspective: 75rem;
+button{
+   
+    border: 1px solid rgb(10,80,107);
+    background-color: rgb(10,80,107);
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 80px;
+    padding: 8px;
+    color: #fff;
+   
+    font-size: 12px;
+    
 }
 
 @media (max-width: 710px){
-    .container{
-        width: 300px;
+    .center{
+        width: 400px;
     }
-    span{
-        margin-top: 30px;
+    .time input{
+        width: 200px;
     }
 }
