@@ -48,7 +48,7 @@ export class DoctorPanelComponent implements OnInit {
 
   selectPatient(patientId: any): void {
     sessionStorage.setItem("patientId", patientId);
-    this.route.navigateByUrl('/patient-schedule');
+    this.route.navigateByUrl('/doctor-patient-schedule');
 
   }
 

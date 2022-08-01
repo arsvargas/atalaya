@@ -1,0 +1,55 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: rgb(10,80,107) 1px solid;
+    border-radius: 10px;
+    width: 600px;
+    color: rgb(10,80,107);
+    box-shadow: rgb(10,80,107) 3px 3px 10px ;
+    margin-bottom: 20px;
+}
+span{
+    font-weight: 700;
+    font-size: 24px;
+    padding: 10px;
+}
+p{
+    padding: 10px;
+}
+textarea{
+    border: rgb(10,80,107) 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+button{
+    padding: 0.6rem;
+    color: #fff;
+    background-color: rgb(10,80,107);
+    border: 1px solid rgb(10,80,107);
+    border-radius: 15px; 
+    margin-bottom: 10px;
+}
+
+button:hover{
+    border: 1px solid rgb(19,158,188);
+    background-color: rgb(19,158,188);
+    transition: 0.3s;
+}
+
+
+@media (max-width: 633px){
+    .box{
+        width: 350px;
+    }
+    span{
+        font-size: 20px;
+    }
+}

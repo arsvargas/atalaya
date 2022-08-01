@@ -1,0 +1,93 @@
+<app-header-doctor></app-header-doctor>
+
+<div class="main-container">
+
+
+    <div class="box">
+        <h3> Informações do paciente </h3>
+        <li>Id: {{patient.id}}</li>
+        <li>Nome: {{patient.name}} {{patient.surname}}</li>
+        <li>Ocupação: {{patient.occupations == null ? 'Não informado' : patient.occupations}} </li>
+        <li>Gênero: {{patient.gender == null ? 'Não informado' : patient.gender}} </li>
+    </div>
+
+
+
+    <div class="box">
+        <h3>Histórico de Consultas</h3>
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Nome do médico</th>
+                <th>Especialidade</th>
+            </tr>
+            <tr routerLink="/about-patient">
+                <td>22/05/22</td>
+                <td>João Silva</td>
+                <td>Clínico Geral</td>
+            </tr>
+            <tr>
+                <td>22/05/22</td>
+                <td>Josué</td>
+                <td>Clínico Geral</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="box">
+        <h3>Adicionar Informações da Consulta </h3>
+        <i class="fa fa-plus-square-o" aria-hidden="true" routerLink="/doctor-about-patient"></i>
+
+    </div>
+
+    <div class="box">
+        <h3>Exames</h3>
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Tipo de exame</th>
+                <th>Status</th>
+                <th>Arquivo</th>
+            </tr>
+            <tr>
+                <td>22/05/22</td>
+                <td>Endoscopia</td>
+                <td>Enviado</td>
+                <td><a target="_blank" href="https://www.buds.com.ua/images/Lorem_ipsum.pdf"><i class="fa fa-file-pdf-o"
+                            aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+                <td>26/05/22</td>
+                <td>Sangue</td>
+                <td>Solicitado</td>
+                <td><label for="upload">Upload</label>
+                    <input type="file" id="upload" name="upload" accept="application/pdf" />
+                </td>
+            </tr>
+        </table>
+
+        <table class="request">
+
+            <tr>
+                <th><input type="date" name="" id=""></th>
+                <th><select name="" id="">
+                        <option value="">Hemograma</option>
+                        <option value="">Endoscopia</option>
+                        <option value="">Transaminases (ALT e AST) ou TGP e TGO</option>
+                        <option value="">Glicemia</option>
+                        <option value="">Colesterol</option>
+                    </select></th>
+                <th class="buttons"><button type="submit">Solicitar</button>
+                    <label for="upload">Upload</label>
+                    <input type="file" id="upload" name="upload" accept="application/pdf" />
+                </th>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+</div>
+
+<app-footer-doctor></app-footer-doctor>

@@ -38,6 +38,8 @@ import { DoctorCompanyListComponent } from './doctor-company-list/doctor-company
 import { DoctorAboutDoctorDayComponent } from './doctor-about-doctor-day/doctor-about-doctor-day.component';
 import { DoctorChatAlertComponent } from './doctor-chat-alert/doctor-chat-alert.component';
 import { DoctorConsultationsInProgressComponent } from './doctor-consultations-in-progress/doctor-consultations-in-progress.component';
+import { DoctorPatientScheduleComponent } from './doctor-patient-schedule/doctor-patient-schedule.component';
+import { DoctorAboutPatientComponent } from './doctor-about-patient/doctor-about-patient.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,9 @@ import { DoctorConsultationsInProgressComponent } from './doctor-consultations-i
     DoctorCompanyListComponent,
     DoctorAboutDoctorDayComponent,
     DoctorChatAlertComponent,
-    DoctorConsultationsInProgressComponent
+    DoctorConsultationsInProgressComponent,
+    DoctorPatientScheduleComponent,
+    DoctorAboutPatientComponent
   ],
   imports: [
     Ng2SearchPipeModule,
