@@ -40,6 +40,8 @@ import { DoctorChatAlertComponent } from './doctor-chat-alert/doctor-chat-alert.
 import { DoctorConsultationsInProgressComponent } from './doctor-consultations-in-progress/doctor-consultations-in-progress.component';
 import { DoctorPatientScheduleComponent } from './doctor-patient-schedule/doctor-patient-schedule.component';
 import { DoctorAboutPatientComponent } from './doctor-about-patient/doctor-about-patient.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { DoctorAboutPatientComponent } from './doctor-about-patient/doctor-about
     DoctorChatAlertComponent,
     DoctorConsultationsInProgressComponent,
     DoctorPatientScheduleComponent,
-    DoctorAboutPatientComponent
+    DoctorAboutPatientComponent,
+    AdminHeaderComponent,
+    AdminPanelComponent
   ],
   imports: [
     Ng2SearchPipeModule,

@@ -1,0 +1,59 @@
+<body>
+
+    <nav>
+        <ul>
+            <div class="logo-empresa"><img src="{{logo}}"></div>
+
+            <li><a type="button" routerLink="/company-list">Lista de Empresas</a></li>
+
+
+            <div class="container-button" *ngIf="gestaoDeFuncionarios; then thenBlock4 else elseBlock4"></div>
+            
+            <ng-template #thenBlock4>
+                <li id="on"><a type="button" routerLink="/"
+                        (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
+            </ng-template>
+           
+            <ng-template #elseBlock4>
+                <li><a type="button" routerLink="/" (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
+            </ng-template>
+
+            
+
+
+
+
+
+            <div class="container-button" *ngIf="gestaoDePacientes; then thenBlock1 else elseBlock1"></div>
+            <ng-template #thenBlock1>
+                <li id="on"><a type="button" (click)="buttonOn('gestaoDePacientes')">Gestão de Paciente</a></li>
+            </ng-template>
+            <ng-template #elseBlock1>
+                <li><a type="button" (click)="buttonOn('gestaoDePacientes')">Gestão de Pacientes</a></li>
+            </ng-template>
+
+
+
+
+            
+            
+
+
+            <div class="container-button" *ngIf="cadastrarAgenda; then thenBlock4 else elseBlock4"></div>
+            <ng-template #thenBlock4>
+                <li id="on"><a type="button" routerLink="/about-doctor"
+                        (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
+            </ng-template>
+            <ng-template #elseBlock4>
+                <li><a type="button" routerLink="/about-doctor" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
+            </ng-template>
+
+           
+            <button (click)="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>
+            </button>
+
+
+            
+        </ul>
+    </nav>
+</body>

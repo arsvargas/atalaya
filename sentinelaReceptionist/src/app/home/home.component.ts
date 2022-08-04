@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
     let isRole: boolean;
     isRole = false;
     this.roles.forEach((element: any) => {
-      if ("receptionist" ==
+      if ("receptionist" || "admin" || "company" || "doctor" ==
        element.name) {
         isRole = true;
       }

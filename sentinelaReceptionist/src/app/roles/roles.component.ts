@@ -48,5 +48,8 @@ export class RolesComponent implements OnInit {
     else if(role == 'receptionist') {
       this.route.navigateByUrl('/company-list');
     }
+    else if(role == 'admin') {
+      this.route.navigateByUrl('/admin-panel');
+    }
   }
 }

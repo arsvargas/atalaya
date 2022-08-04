@@ -31,6 +31,9 @@ import { DoctorChatAlertComponent } from './doctor-chat-alert/doctor-chat-alert.
 import { DoctorConsultationsInProgressComponent } from './doctor-consultations-in-progress/doctor-consultations-in-progress.component';
 import { DoctorPatientScheduleComponent } from './doctor-patient-schedule/doctor-patient-schedule.component';
 import { DoctorAboutPatientComponent } from './doctor-about-patient/doctor-about-patient.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component'; 
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -63,6 +66,9 @@ const routes: Routes = [
   { path: 'doctor-consultations-in-progress', component: DoctorConsultationsInProgressComponent, canActivate:[AuthGuardService]},
   { path: 'doctor-patient-schedule', component: DoctorPatientScheduleComponent, canActivate:[AuthGuardService]},
   { path: 'doctor-about-patient', component: DoctorAboutPatientComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-header', component: AdminHeaderComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-panel', component: AdminPanelComponent, canActivate:[AuthGuardService]},
+
 
 
 
