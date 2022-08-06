@@ -4,17 +4,16 @@
         <ul>
             <div class="logo-empresa"><img src="{{logo}}"></div>
 
-            <li><a type="button" routerLink="/company-list">Lista de Empresas</a></li>
-
-
-            <div class="container-button" *ngIf="gestaoDeFuncionarios; then thenBlock4 else elseBlock4"></div>
             
-            <ng-template #thenBlock4>
+
+            <div class="container-button" *ngIf="gestaoDeFuncionarios; then thenBlock2 else elseBlock2"></div>
+            
+            <ng-template #thenBlock2>
                 <li id="on"><a type="button" routerLink="/"
                         (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
             </ng-template>
            
-            <ng-template #elseBlock4>
+            <ng-template #elseBlock2>
                 <li><a type="button" routerLink="/" (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
             </ng-template>
 
@@ -45,8 +44,20 @@
                         (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
             </ng-template>
             <ng-template #elseBlock4>
-                <li><a type="button" routerLink="/about-doctor" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
+                <li><a type="button" routerLink="/about-doctor" (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
             </ng-template>
+
+
+
+            <div class="container-button" *ngIf="supervisao; then thenBlock3 else elseBlock3"></div>
+            <ng-template #thenBlock3>
+                <li id="on"><a type="button" (click)="buttonOn('supervisao')">Supervisão</a></li>
+            </ng-template>
+            <ng-template #elseBlock3>
+                <li><a type="button" (click)="buttonOn('supervisao')">Supervisão</a></li>
+            </ng-template>
+
+
 
            
             <button (click)="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>

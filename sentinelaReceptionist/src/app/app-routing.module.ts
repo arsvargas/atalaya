@@ -33,6 +33,10 @@ import { DoctorPatientScheduleComponent } from './doctor-patient-schedule/doctor
 import { DoctorAboutPatientComponent } from './doctor-about-patient/doctor-about-patient.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component'; 
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminEmployeeManagementComponent } from './admin-employee-management/admin-employee-management.component';
+import { AdminPatientManagementComponent } from './admin-patient-management/admin-patient-management.component';
+import { AdminSupervisionComponent } from './admin-supervision/admin-supervision.component';
+import { AdminScheduleComponent } from './admin-schedule/admin-schedule.component';
 
 
 const routes: Routes = [
@@ -68,6 +72,13 @@ const routes: Routes = [
   { path: 'doctor-about-patient', component: DoctorAboutPatientComponent, canActivate:[AuthGuardService]},
   { path: 'admin-header', component: AdminHeaderComponent, canActivate:[AuthGuardService]},
   { path: 'admin-panel', component: AdminPanelComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-employee-management', component: AdminEmployeeManagementComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-patient-management', component: AdminPatientManagementComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-supervision', component: AdminSupervisionComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-schedule', component: AdminScheduleComponent, canActivate:[AuthGuardService]},
+
+
+
 
 
 

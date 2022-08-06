@@ -11,7 +11,7 @@ export class AdminHeaderComponent implements OnInit {
 
   gestaoDePacientes: any;
   cadastrarAgenda: any;
-  alertaChat: any;
+  supervisao: any;
   gestaoDeFuncionarios: any;
   logo:any;
   role:any;
@@ -30,17 +30,17 @@ export class AdminHeaderComponent implements OnInit {
     if(button == 'gestaoDePacientes') {
       this.gestaoDePacientes = true;
       this.cadastrarAgenda = false;
-      this.alertaChat = false;
+      this.supervisao = false;
       this.gestaoDeFuncionarios = false;
       sessionStorage.setItem('patientId', null);
       this.router.navigateByUrl("/patient-register");
     } else if (button == 'cadastrarAgenda') {
       this.cadastrarAgenda = true;
       this.gestaoDePacientes = false;
-      this.alertaChat = false;
+      this.supervisao = false;
       this.gestaoDeFuncionarios = false;
-    } else if (button == 'alertaChat') {
-      this.alertaChat = true;
+    } else if (button == 'supervisao') {
+      this.supervisao = true;
       this.gestaoDePacientes = false;
       this.cadastrarAgenda = false;
       this.gestaoDeFuncionarios = false;
@@ -48,7 +48,7 @@ export class AdminHeaderComponent implements OnInit {
       this.gestaoDeFuncionarios = true;
       this.gestaoDePacientes = false;
       this.cadastrarAgenda = false;
-      this.alertaChat = false;
+      this.supervisao = false;
     }
   }
 
@@ -58,15 +58,15 @@ export class AdminHeaderComponent implements OnInit {
     if(lightedButton == 'gestaoDePacientes') {
       this.gestaoDePacientes = true;
       this.cadastrarAgenda = false;
-      this.alertaChat = false;
+      this.supervisao = false;
       this.gestaoDeFuncionarios = false;
     } else if (lightedButton == 'cadastrarAgenda') {
       this.cadastrarAgenda = true;
       this.gestaoDePacientes = false;
-      this.alertaChat = false;
+      this.supervisao = false;
       this.gestaoDeFuncionarios = false;
-    } else if (lightedButton == 'alertaChat') {
-      this.alertaChat = true;
+    } else if (lightedButton == 'supervisao') {
+      this.supervisao = true;
       this.gestaoDePacientes = false;
       this.cadastrarAgenda = false;
       this.gestaoDeFuncionarios = false;
@@ -74,12 +74,12 @@ export class AdminHeaderComponent implements OnInit {
       this.gestaoDeFuncionarios = true;
       this.gestaoDePacientes = false;
       this.cadastrarAgenda = false;
-      this.alertaChat = false;
+      this.supervisao = false;
     } else {
       this.gestaoDeFuncionarios = false;
       this.gestaoDePacientes = false;
       this.cadastrarAgenda = false;
-      this.alertaChat = false;
+      this.supervisao = false;
     }
   }
 

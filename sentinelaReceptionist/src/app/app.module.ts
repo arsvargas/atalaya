@@ -42,6 +42,10 @@ import { DoctorPatientScheduleComponent } from './doctor-patient-schedule/doctor
 import { DoctorAboutPatientComponent } from './doctor-about-patient/doctor-about-patient.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminEmployeeManagementComponent } from './admin-employee-management/admin-employee-management.component';
+import { AdminPatientManagementComponent } from './admin-patient-management/admin-patient-management.component';
+import { AdminSupervisionComponent } from './admin-supervision/admin-supervision.component';
+import { AdminScheduleComponent } from './admin-schedule/admin-schedule.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,11 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     DoctorPatientScheduleComponent,
     DoctorAboutPatientComponent,
     AdminHeaderComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    AdminEmployeeManagementComponent,
+    AdminPatientManagementComponent,
+    AdminSupervisionComponent,
+    AdminScheduleComponent
   ],
   imports: [
     Ng2SearchPipeModule,
