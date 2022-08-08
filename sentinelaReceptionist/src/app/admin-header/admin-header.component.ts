@@ -20,7 +20,7 @@ export class AdminHeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkLightedButton();
-    this. getLogoTemp();
+    this.getLogoTemp();
     this.role = sessionStorage.getItem("role");
   }
 
@@ -33,7 +33,7 @@ export class AdminHeaderComponent implements OnInit {
       this.supervisao = false;
       this.gestaoDeFuncionarios = false;
       sessionStorage.setItem('patientId', null);
-      this.router.navigateByUrl("/patient-register");
+      this.router.navigateByUrl("/admin-patient-management");
     } else if (button == 'cadastrarAgenda') {
       this.cadastrarAgenda = true;
       this.gestaoDePacientes = false;

@@ -2,19 +2,19 @@
 
     <nav>
         <ul>
-            <div class="logo-empresa"><img src="{{logo}}"></div>
+            <div class="logo-empresa"><img src="{{logo}}" routerLink="/admin-panel" title="Painel do Administrador"></div>
 
             
 
             <div class="container-button" *ngIf="gestaoDeFuncionarios; then thenBlock2 else elseBlock2"></div>
             
             <ng-template #thenBlock2>
-                <li id="on"><a type="button" routerLink="/"
+                <li id="on"><a type="button" routerLink="/admin-employee-management"
                         (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
             </ng-template>
            
             <ng-template #elseBlock2>
-                <li><a type="button" routerLink="/" (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
+                <li><a type="button" routerLink="/admin-employee-management" (click)="buttonOn('gestaoDeFuncionarios')">Gestão de Funcionários</a></li>
             </ng-template>
 
             
@@ -25,10 +25,10 @@
 
             <div class="container-button" *ngIf="gestaoDePacientes; then thenBlock1 else elseBlock1"></div>
             <ng-template #thenBlock1>
-                <li id="on"><a type="button" (click)="buttonOn('gestaoDePacientes')">Gestão de Paciente</a></li>
+                <li id="on"><a type="button" routerLink="/admin-patient-management" (click)="buttonOn('gestaoDePacientes')">Gestão de Paciente</a></li>
             </ng-template>
             <ng-template #elseBlock1>
-                <li><a type="button" (click)="buttonOn('gestaoDePacientes')">Gestão de Pacientes</a></li>
+                <li><a type="button" routerLink="/admin-patient-management" (click)="buttonOn('gestaoDePacientes')">Gestão de Pacientes</a></li>
             </ng-template>
 
 
@@ -40,21 +40,21 @@
 
             <div class="container-button" *ngIf="cadastrarAgenda; then thenBlock4 else elseBlock4"></div>
             <ng-template #thenBlock4>
-                <li id="on"><a type="button" routerLink="/about-doctor"
+                <li id="on"><a type="button" routerLink="/admin-schedule"
                         (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
             </ng-template>
             <ng-template #elseBlock4>
-                <li><a type="button" routerLink="/about-doctor" (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
+                <li><a type="button" routerLink="/admin-schedule" (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
             </ng-template>
 
 
 
             <div class="container-button" *ngIf="supervisao; then thenBlock3 else elseBlock3"></div>
             <ng-template #thenBlock3>
-                <li id="on"><a type="button" (click)="buttonOn('supervisao')">Supervisão</a></li>
+                <li id="on"><a type="button" routerLink="/admin-supervision" (click)="buttonOn('supervisao')">Supervisão</a></li>
             </ng-template>
             <ng-template #elseBlock3>
-                <li><a type="button" (click)="buttonOn('supervisao')">Supervisão</a></li>
+                <li><a type="button" routerLink="/admin-supervision" (click)="buttonOn('supervisao')">Supervisão</a></li>
             </ng-template>
 
 

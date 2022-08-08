@@ -20,6 +20,7 @@ nav {
     border: 0px solid #fff;
     width: 100px;    
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .logo-empresa img {
@@ -94,6 +95,7 @@ ul button{
 
 ul button:hover{
     background-color: rgb(19,158,188);
+    
 }
 
 ul button i{
@@ -119,7 +121,7 @@ ul button i{
     .logo-empresa img{
         margin-top: 30px;
         margin-bottom: 10px;
-
+        
     }
 
     ul li{
@@ -135,5 +137,7 @@ ul button i{
     }
     .logo-empresa{
         margin-top: 5px;
+        
     }
+
 }

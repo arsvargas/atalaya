@@ -10,6 +10,7 @@ export class AdminEmployeeManagementComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
