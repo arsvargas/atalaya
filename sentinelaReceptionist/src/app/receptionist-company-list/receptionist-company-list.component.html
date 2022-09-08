@@ -1,0 +1,27 @@
+<app-recepcionist-header></app-recepcionist-header>
+<div class="main">
+  <div class="center">
+    <div class="search-field">
+
+      <input [(ngModel)]="filterCompany" id="search" type="search" placeholder="Pesquisar Empresa">
+      <button (click)="receptionistCompanies()"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="pagination-top">
+  <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
+  </div>
+  <div class="center">
+
+    <span>Resultado da Pesquisa</span>
+    <ul *ngFor="let company of listCompanies | filter: filterCompany | paginate: { itemsPerPage: counter, currentPage: pag }  ">
+
+      <li routerLink="/receptionist-panel" (click)="setLogoTemp(48, company.id)">{{company.name}}</li>
+    </ul>
+  </div>
+  <div class="pagination-bottom">
+    <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

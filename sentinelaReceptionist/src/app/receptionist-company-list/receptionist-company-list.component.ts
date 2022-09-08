@@ -3,11 +3,11 @@ import { ServiceAuthService } from '../services/service-auth.service';
 import { company } from './company';
 
 @Component({
-  selector: 'app-doctor-company-list',
-  templateUrl: './doctor-company-list.component.html',
-  styleUrls: ['./doctor-company-list.component.css']
+  selector: 'app-receptionist-company-list',
+  templateUrl: './receptionist-company-list.component.html',
+  styleUrls: ['./receptionist-company-list.component.css']
 })
-export class DoctorCompanyListComponent implements OnInit {
+export class ReceptionistCompanyListComponent implements OnInit {
 
   filterCompany: string;
 
@@ -18,14 +18,12 @@ export class DoctorCompanyListComponent implements OnInit {
 
   company: any;
 
-  constructor(
-    private companyListService: ServiceAuthService
-  ) { 
+  constructor( private companyListService: ServiceAuthService ) { 
     this.listCompanies = [];
   }
 
   ngOnInit(): void {
-    this.doctorCompanies();
+    this.receptionistCompanies();
   }
 
   setLogoTemp(img: any, companyId: any):void{
@@ -33,7 +31,7 @@ export class DoctorCompanyListComponent implements OnInit {
     sessionStorage.setItem("companyId", companyId);
   }
 
-  doctorCompanies(): void {
+  receptionistCompanies(): void {
     console.log(sessionStorage.getItem("token"));
     this.companyListService.listCompanies(sessionStorage.getItem("token"))
     .subscribe(
@@ -46,5 +44,4 @@ export class DoctorCompanyListComponent implements OnInit {
       }
     );
   }
-
 }

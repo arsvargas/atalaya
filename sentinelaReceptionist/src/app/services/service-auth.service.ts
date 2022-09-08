@@ -40,7 +40,24 @@ export class ServiceAuthService {
       'Content-Type': 'application/json',
       'Authorization':"Bearer " + token
    });
-    return this.http.get<company>(`${baseUrl}/companies/me`, {headers : reqHeader});
+    return this.http.get<company>(`${baseUrl}/companies/`, {headers : reqHeader});
   }
+
+  doctorCompanies(token: any): Observable<any> {
+    var reqHeader = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " + token
+   });
+    return this.http.get(`${baseUrl}/companies/me/doctor?search={{search?}}`, {headers : reqHeader});
+  }
+
+  receptionistCompanies(token: any): Observable<any> {
+    var reqHeader = new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Authorization':"Bearer " + token
+   });
+    return this.http.get(`${baseUrl}/companies/me/receptionist?search={{search?}}`, {headers : reqHeader});
+  }
+
 
 }

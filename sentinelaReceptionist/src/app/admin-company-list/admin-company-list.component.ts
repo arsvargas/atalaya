@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceAuthService } from '../services/service-auth.service';
 import { company } from './company';
 
+
 @Component({
-  selector: 'app-doctor-company-list',
-  templateUrl: './doctor-company-list.component.html',
-  styleUrls: ['./doctor-company-list.component.css']
+  selector: 'app-admin-company-list',
+  templateUrl: './admin-company-list.component.html',
+  styleUrls: ['./admin-company-list.component.css']
 })
-export class DoctorCompanyListComponent implements OnInit {
+export class AdminCompanyListComponent implements OnInit {
 
   filterCompany: string;
 
@@ -25,7 +26,7 @@ export class DoctorCompanyListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.doctorCompanies();
+    this.adminCompanies();
   }
 
   setLogoTemp(img: any, companyId: any):void{
@@ -33,7 +34,7 @@ export class DoctorCompanyListComponent implements OnInit {
     sessionStorage.setItem("companyId", companyId);
   }
 
-  doctorCompanies(): void {
+  adminCompanies(): void {
     console.log(sessionStorage.getItem("token"));
     this.companyListService.listCompanies(sessionStorage.getItem("token"))
     .subscribe(

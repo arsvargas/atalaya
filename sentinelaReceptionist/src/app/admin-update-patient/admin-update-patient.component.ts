@@ -5,11 +5,11 @@ import { Patient } from '../receptionist-panel/patient';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-patient-update',
-  templateUrl: './patient-update.component.html',
-  styleUrls: ['./patient-update.component.css']
+  selector: 'app-admin-update-patient',
+  templateUrl: './admin-update-patient.component.html',
+  styleUrls: ['./admin-update-patient.component.css']
 })
-export class PatientUpdateComponent implements OnInit {
+export class AdminUpdatePatientComponent implements OnInit {
 
   patientUpdateFormGroup: FormGroup;
   patient = {} as Patient;
@@ -35,35 +35,37 @@ export class PatientUpdateComponent implements OnInit {
   upGender:any;
   upEmail:any;
 
-  constructor(private formBuilder: FormBuilder, 
+  constructor(
+    private formBuilder: FormBuilder, 
     private patientService: ServiceAuthService,
-    private route: Router) { 
-      this.patientUpdateFormGroup = this.formBuilder.group({
-        name: ['', Validators.required],
-        surname: ['', Validators.required],
-        email: ['', [
-          Validators.required,
-          Validators.email
-        ]],
-        CPF: ['', Validators.required],
-        RG: ['', Validators.required],
-        address: ['', Validators.required],
-        number: ['', Validators.required],
-        city: ['', Validators.required],
-        date: ['', Validators.required],
-        district: ['', Validators.required],
-        CEP: ['', Validators.required],
-        phone: ['', Validators.required],
-        SUS:[],
-        UF:[],
-        marital_status:[],
-        health_insurance_name:[],
-        health_insurance_number:[],
-        gender:[],
-        mother_name:[],
-        complement:[],
-        password:[]
-      });          
+    private route: Router
+  ) { 
+    this.patientUpdateFormGroup = this.formBuilder.group({
+      name: ['', Validators.required],
+      surname: ['', Validators.required],
+      email: ['', [
+        Validators.required,
+        Validators.email
+      ]],
+      CPF: ['', Validators.required],
+      RG: ['', Validators.required],
+      address: ['', Validators.required],
+      number: ['', Validators.required],
+      city: ['', Validators.required],
+      date: ['', Validators.required],
+      district: ['', Validators.required],
+      CEP: ['', Validators.required],
+      phone: ['', Validators.required],
+      SUS:[],
+      UF:[],
+      marital_status:[],
+      health_insurance_name:[],
+      health_insurance_number:[],
+      gender:[],
+      mother_name:[],
+      complement:[],
+      password:[]
+    });
   }
 
   ngOnInit(): void {
@@ -117,7 +119,7 @@ export class PatientUpdateComponent implements OnInit {
       .subscribe(
         data => {
           console.log(data);
-          this.route.navigateByUrl('/patient-schedule');
+          this.route.navigateByUrl('/admin-patient-schedule');
         },
         error => {
           console.log(error);

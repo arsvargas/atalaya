@@ -50,7 +50,7 @@ listPatient(): void {
 
 selectPatient(patientId: any): void {
   sessionStorage.setItem("patientId", patientId);
-  this.route.navigateByUrl('/patient-schedule');
+  this.route.navigateByUrl('/admin-patient-schedule');
 
 }
 

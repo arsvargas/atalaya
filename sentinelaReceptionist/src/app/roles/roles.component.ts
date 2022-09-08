@@ -49,7 +49,7 @@ export class RolesComponent implements OnInit {
       this.route.navigateByUrl('/company-list');
     }
     else if(role == 'admin') {
-      this.route.navigateByUrl('/admin-panel');
+      this.route.navigateByUrl('/admin-company-list');
     }
   }
 }

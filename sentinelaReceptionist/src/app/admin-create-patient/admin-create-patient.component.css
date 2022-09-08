@@ -1,0 +1,103 @@
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: rgb(10, 80, 107) 3px 3px 10px;
+    margin-bottom: 20px;
+}
+
+.main-container h3{
+    color: rgb(10,80,107);
+    text-align: center;
+    padding: 10px;
+}
+
+.main-container form{
+    color: rgb(10,80,107);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+}
+
+.main-container form .form-in {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    line-height: 30px;
+}
+
+.main-container form .form-in label{
+    display: flex;
+    margin: auto 0;
+    margin-right: 10px;
+    flex-wrap: nowrap;
+    width: 200px;
+}
+
+.main-container form .form-in input {
+    width: 100%;
+    border-radius: 15px;
+    color: grey;
+    border: 1px solid grey;
+    padding: 3px;
+    padding-left: 15px;
+}
+
+.main-container form .form-in select{
+    width: 100%;
+    border-radius: 15px;
+    color: grey;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.main-container form .form-in option {
+    border-radius: 15px;
+}
+
+.main-container button{
+    margin: 10px;
+    border: 1px solid rgb(10,80,107);
+    background-color: rgb(10,80,107);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0 auto;
+    width: 300px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.main-container button:hover{
+    background-color: rgb(19,158,188);
+    border: 1px solid rgb(19,158,188);
+   
+}
+
+span{
+    color: rgb(214, 21, 21);
+    font-size: 9px;
+    font-weight: 700;
+    margin-top: -15px;
+    margin-left: 8px;
+    font-style: italic;
+}
+#valid-email{
+    margin-top: -5px;
+}
+
+@media (max-width: 600px){
+    .main-container{
+        width: 350px;
+    }
+    .form-in{
+        flex-direction: column;
+    }
+}

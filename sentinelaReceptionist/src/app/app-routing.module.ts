@@ -37,6 +37,12 @@ import { AdminEmployeeManagementComponent } from './admin-employee-management/ad
 import { AdminPatientManagementComponent } from './admin-patient-management/admin-patient-management.component';
 import { AdminSupervisionComponent } from './admin-supervision/admin-supervision.component';
 import { AdminScheduleComponent } from './admin-schedule/admin-schedule.component';
+import { ReceptionistCompanyListComponent } from './receptionist-company-list/receptionist-company-list.component';
+import { AdminCreatePatientComponent } from './admin-create-patient/admin-create-patient.component';
+import { AdminCreateEmployeeComponent } from './admin-create-employee/admin-create-employee.component';
+import { AdminCompanyListComponent } from './admin-company-list/admin-company-list.component';
+import { AdminPatientScheduleComponent } from './admin-patient-schedule/admin-patient-schedule.component';
+import { AdminUpdatePatientComponent } from './admin-update-patient/admin-update-patient.component';
 
 
 const routes: Routes = [
@@ -76,16 +82,12 @@ const routes: Routes = [
   { path: 'admin-patient-management', component: AdminPatientManagementComponent, canActivate:[AuthGuardService]},
   { path: 'admin-supervision', component: AdminSupervisionComponent, canActivate:[AuthGuardService]},
   { path: 'admin-schedule', component: AdminScheduleComponent, canActivate:[AuthGuardService]},
-
-
-
-
-
-
-
-
-
-
+  { path: 'receptionist-company-list', component: ReceptionistCompanyListComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-create-patient', component: AdminCreatePatientComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-create-employee', component: AdminCreateEmployeeComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-company-list', component: AdminCompanyListComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-patient-schedule', component: AdminPatientScheduleComponent, canActivate:[AuthGuardService]},
+  { path: 'admin-update-patient', component: AdminUpdatePatientComponent, canActivate:[AuthGuardService]},
 
 
 

@@ -6,7 +6,7 @@
       <div class="search-field">
   
         <input [(ngModel)]="filterCompany" id="search" type="search" placeholder="Pesquisar Empresa">
-        <button (click)="doctorCompanies()"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <button (click)="adminCompanies()"><i class="fa fa-search" aria-hidden="true"></i></button>
       </div>
     </div>
     <div class="pagination-top">
@@ -17,7 +17,7 @@
       <span>Resultado da Pesquisa</span>
       <ul *ngFor="let company of listCompanies | filter: filterCompany | paginate: { itemsPerPage: counter, currentPage: pag }  ">
   
-        <li routerLink="/doctor-panel" (click)="setLogoTemp(48, company.id)">{{company.name}}</li>
+        <li routerLink="/admin-panel" (click)="setLogoTemp(48, company.id)">{{company.name}}</li>
       </ul>
     </div>
     <div class="pagination-bottom">

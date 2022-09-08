@@ -17,6 +17,39 @@
     box-shadow: rgb(10,80,107) 3px 3px 10px ;
 }
 
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    align-items: center;
+}
+
+.row h6{
+    color: rgb(10,80,107);
+    text-align: center;
+    margin: auto 0;
+    font-weight: bold;
+}
+.center button{
+    border: 1px solid rgb(10,80,107);
+    background-color: rgb(10,80,107);
+    border-radius: 10px;
+    width: 40px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.center button{
+    color: #fff;
+}
+
+.center button:hover {
+    background-color: rgb(19, 158, 188);
+    border: 1px solid rgb(19, 158, 188);
+    transition: 0.3s;
+}
+
 .search-field{
     width: 100%;
     color: rgb(10,80,107);
@@ -42,6 +75,8 @@
     background-color: rgb(10,80,107);
     border-radius: 10px;
     width: 40px;
+    transition: 0.3s;
+
 }
 
 .search-field button i{
@@ -51,6 +86,8 @@
 .search-field button:hover{
     background-color: rgb(19,158,188);
     border: 1px solid rgb(19,158,188);
+    transition: 0.3s;
+
 }
 
 .options {
@@ -70,6 +107,8 @@
 .options button:hover{
     background-color: rgb(19,158,188);
     border: 1px solid rgb(19,158,188);
+    transition: 0.3s;
+
 }
 
 .center ul {
@@ -95,6 +134,8 @@
 .center ul li:hover{
     background-color: rgb(19, 158, 188);
     color: #fff;
+    transition: 0.3s;
+
 }
 
 .pagination-top{
@@ -119,9 +160,15 @@
     margin-right: 5px;
 }
 .icons-1 i{
-    margin-right: 5px;
+    margin-right: 15px;
 
 }
+.icons-1 i:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+
 @media (max-width: 710px){
     .center:first-child{
         margin-top: 150px;
@@ -141,5 +188,8 @@
     .search-field button{
         width: 100%;
         margin: 10px;
+    }
+    .center:last-child{
+        margin-bottom: 50px;
     }
 }

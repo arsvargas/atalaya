@@ -1,0 +1,189 @@
+<app-admin-header></app-admin-header>
+
+
+<div class="main-container">
+  <h3>Edição de {{patient.name}}</h3>
+  <form [formGroup]="patientUpdateFormGroup">
+
+    <div class="form-in">
+      <label for="">Nome </label>
+      <input type="text"  [(ngModel)]="upName" formControlName="name" maxlength="40" minlength="5" [value]=patient.name>
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['name'].errors">Campo obrigatório!</span>
+
+    <div class="form-in">
+      <label for="">Sobrenome</label>
+      <input type="text" [(ngModel)]="upSurname" formControlName="surname" maxlength="40" minlength="4" value="{{patient.surname}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['surname'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="">Endereço</label>
+      <input type="text" [(ngModel)]="upAddress" formControlName="address" minlength="8" value="{{patient.address}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['address'].errors">Campo obrigatório!</span>
+
+    <div class="form-in">
+      <label for="">Número</label>
+      <input type="text" [(ngModel)]="upNumber" formControlName="number" value="{{patient.number}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['number'].errors">Campo obrigatório!</span>
+
+    <div class="form-in">
+      <label for="complement">Complemento</label>
+      <input type="text" [(ngModel)]="upComplement" formControlName="complement" value="{{patient.complement}}">
+    </div>
+
+
+
+    <div class="form-in">
+      <label for="UF">Estado</label>
+      <select [(ngModel)]="upUF" formControlName="UF" name="UF" id="UF"> 
+        <option value="{patient.UF}" disabled="true" [selected]="true">{{patient.UF == null ? '' : patient.UF}}</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="EX">Estrangeiro</option>
+      </select>
+
+    </div>
+
+    <div class="form-in">
+      <label for="">Cidade</label>
+      <input type="text" [(ngModel)]="upCity" formControlName="city" minlength="5" value="{{patient.city}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['city'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="">Data de nascimento</label>
+      <input type="date" [(ngModel)]="upDate" formControlName="date">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['date'].errors">Campo obrigatório! </span>
+
+
+    <div class="form-in">
+      <label for="bairro">Bairro</label>
+      <input  type="text" [(ngModel)]="upDistrict" formControlName="district" minlength="5" value="{{patient.district}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['district'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="CEP">CEP</label>
+      <input  type="text" [(ngModel)]="upCEP" name="CEP" [brmasker]="{mask:'00.000.000', len:10}" minlength="10" formControlName="CEP" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="{{patient.CEP}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['CEP'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="phone">Telefone</label>
+      <input  type="tel" [(ngModel)]="upPhone" name="phone" placeholder=" (55) 55555-5555" [brmasker]="{phone: true}"
+        formControlName="phone" value="{{patient.phone}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['phone'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="CPF">CPF</label>
+      <input  type="text" [(ngModel)]="upCPF" name="CPF" formControlName="CPF" [brmasker]="{mask:'000.000.000-00', len:14}" minlength="14" 
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="{{patient.CPF}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['CPF'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="RG">RG</label>
+      <input  type="text" [(ngModel)]="upRG" name="RG" maxlength="10" formControlName="RG" minlength="10"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="{{patient.RG}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['RG'].errors">Campo obrigatório!</span>
+
+
+    <div class="form-in">
+      <label for="SUS">Num. cart. SUS</label>
+      <input [(ngModel)]="upSUS" formControlName="SUS" name="SUS"  type="text" maxlength="15" [brmasker]="{mask:'000000000000000', len:15}"
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="{{patient.SUS}}">
+    </div>
+
+    <div class="form-in">
+      <label for="health_insurance_name">Convênio</label>
+      <input [(ngModel)]="upHealth_insurance_name" formControlName="health_insurance_name" name="health_insurance_name" type="text" value="{{patient.health_insurance_name}}">
+    </div>
+
+    <div class="form-in">
+      <label for="health_insurance_number">Número do Convênio</label>
+      <input [(ngModel)]="upHealth_insurance_number" formControlName="health_insurance_number" name="health_insurance_number" type="text" value="{{patient.health_insurance_number}}">
+    </div>
+
+    <div class="form-in">
+      <label for="mother_name">Nome da mãe</label>
+      <input [(ngModel)]="upMother_name" formControlName="mother_name" name="mother_name" type="text" value="{{patient.mother_name}}">
+    </div>
+
+    <div class="form-in">
+      <label for="marital_status">Estado civil</label>
+      <select [(ngModel)]="upMarital_status" formControlName="marital_status" name="marital_status" id="marital_status">
+        <option value="{patient.marital_status}" disabled="true" [selected]="true">{{patient.marital_status == null ? '' : patient.marital_status}}</option>
+
+        <option value=""></option>
+        <option value="Solteiro">Solteiro</option>
+        <option value="Casado">Casado</option>
+        <option value="Separado">Separado</option>
+        <option value="Divorciado">Divorciado</option>
+        <option value="Viúvo">Viúvo</option>
+        <option value="Amasiado">Amasiado</option>
+      </select>
+    </div>
+
+    <div class="form-in">
+      <label for="gender">Gênero</label>
+      <select [(ngModel)]="upGender" formControlName="gender" name="gender" id="gender">
+        <option value="{patient.gender}" disabled="true" [selected]="true">{{patient.gender == null ? '' : patient.gender}}</option>
+        <option value="male">Masculino</option>
+        <option value="female">Feminino</option>
+        <option value="undefined">Não informar</option>
+      </select>
+    </div>
+
+    <div class="form-in">
+      <label for="email">Email</label>
+      <input type="email" [(ngModel)]="upEmail" formControlName="email" value="{{patient.email}}">
+    </div>
+    <span *ngIf="patientUpdateFormGroup.controls['email'].errors">Campo obrigatório!</span>
+    <span id="valid-email" *ngIf="patientUpdateFormGroup.controls['email'].errors?.['email']">
+      E-mail inválido
+  </span>
+
+  </form>
+  <button type="submit" (click)="updatePatient()">Atualizar</button>
+
+</div>
+
+<app-footer></app-footer>

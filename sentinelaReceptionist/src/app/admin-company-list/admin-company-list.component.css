@@ -10,11 +10,14 @@
     align-items: center;
     width: 600px;
     margin: 0 auto;
-    margin-top: 50px;
     border: 1px solid grey;
     border-radius: 20px;
     box-shadow: rgb(10, 80, 107) 3px 3px 10px;
 }
+.center:first-child{
+    margin-top: 50px;
+}
+
 
 .search-field {
     color: rgb(10, 80, 107);
@@ -50,6 +53,7 @@
     border: 1px solid rgb(19, 158, 188);
 }
 
+
 .center span{
     color: grey;
     margin: 10px;
@@ -64,6 +68,8 @@
 
 .center ul li{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -73,11 +79,31 @@
     color: rgb(10, 80, 107);
 }
 
+.center ul li img {
+        width: 100px;   
+    }
+
 .center ul li:hover{
     background-color: rgb(19, 158, 188);
     color: #fff;
 }
 
+.pagination-top{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background-color: rgb(19, 158, 188);
+    border-radius: 5px;
+  }
 
 @media (max-width: 600px) {
     .center {
