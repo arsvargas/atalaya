@@ -4,7 +4,7 @@
     <div class="first">
         <div class="sect-left">
             <div class="box">
-                <h3> Informações do paciente <i class="fa fa-pencil-square-o" aria-hidden="true" (click)="updatePatient()"></i> <i class="fa fa-trash-o" aria-hidden="true" (click)="deletePatient(patient.name, patient.id)"></i>
+                <h3> Informações do paciente <i class="fa fa-pencil-square-o" aria-hidden="true" (click)="updatePatient()" title="Editar"></i> <i class="fa fa-trash-o" aria-hidden="true" (click)="deletePatient(patient.name, patient.id)" title="Deletar"></i>
                 </h3>
                 <li>Id: {{patient.id}}</li>
                 <li>Nome: {{patient.name}} {{patient.surname}}</li>
