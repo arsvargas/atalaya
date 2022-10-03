@@ -77,9 +77,29 @@
     background-color: rgb(19, 158, 188);
     color: #fff;
 }
-
+.pagination-top{
+    margin-top: 50px;
+    margin-bottom: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background-color: rgb(19, 158, 188);
+    border-radius: 5px;
+  }
 
 @media (max-width: 600px) {
+    .center:first-child{
+        margin-top: 150px;
+    }
     .center {
         width: 350px;
     }

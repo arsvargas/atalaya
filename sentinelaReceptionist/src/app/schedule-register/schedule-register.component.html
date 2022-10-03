@@ -4,21 +4,25 @@
   <div class="center">
     <div class="search-field">
       
-      <input id="search" type="search" placeholder="Pesquisar Médico">
-      <button ><i class="fa fa-search" aria-hidden="true"></i></button>
+      <input [(ngModel)]="filterDoctor" id="search" type="search" placeholder="Pesquisar Médico">
+      <button (click)="searchDoctors(filterDoctor)"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
 
 
   </div>
+
+  <div class="pagination-top">
+    <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
+    </div>
   <div class="center">
     <span>Resultado da Pesquisa</span>
-    <ul>
-      <li routerLink="/about-doctor">Medico 1</li>
-      <li>Medico 2</li>
-      <li>Medico 3</li>
-      <li>Medico 4</li>
+    <ul *ngFor="let doctor of listDoctors | filter: filterDoctor | paginate: { itemsPerPage: counter, currentPage: pag }  " >
+      <li (click)="selectDoctor(doctor.id)" >{{doctor.name}} {{doctor.occupations}}</li>        
     </ul>
 
+  </div>
+  <div class="pagination-bottom">
+    <pagination-controls class="my-pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" [responsive]="true"></pagination-controls>
   </div>
 </div>
 

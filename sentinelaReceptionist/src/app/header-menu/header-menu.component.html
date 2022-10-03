@@ -23,8 +23,7 @@
                 <li id="on"><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar Paciente</a></li>
             </ng-template>
             <ng-template #elseBlock1>
-                <li><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar
-                        Paciente</a></li>
+                <li><a type="button" (click)="buttonOn('cadastrarPaciente')">Cadastrar Paciente</a></li>
             </ng-template></span>
 
             <span *ngIf="role == 'receptionist'">
@@ -36,16 +35,6 @@
             <ng-template #elseBlock2>
                 <li><a type="button" routerLink="/schedule-register" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
             </ng-template></span>
-
-
-            <div class="container-button" *ngIf="cadastrarAgenda; then thenBlock4 else elseBlock4"></div>
-            <ng-template #thenBlock4>
-                <li id="on"><a type="button" routerLink="/about-doctor"
-                        (click)="buttonOn('cadastrarAgenda')">Agenda</a></li>
-            </ng-template>
-            <ng-template #elseBlock4>
-                <li><a type="button" routerLink="/about-doctor" (click)="buttonOn('cadastrarAgenda')">Agendar</a></li>
-            </ng-template>
 
             <div class="container-button" *ngIf="alertaChat; then thenBlock3 else elseBlock3"></div>
             <ng-template #thenBlock3>
